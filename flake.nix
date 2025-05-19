@@ -19,8 +19,8 @@
     let
       system = "x86_64-linux";
       commonModules = [
-        sops-nix.nixosModules.sops
-        ./system/secrets.nix
+        #sops-nix.nixosModules.sops
+        #./system/secrets.nix
 
         #./system/sing-box.nix
         #./system/zapret.nix
