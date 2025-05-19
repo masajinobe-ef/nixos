@@ -7,7 +7,6 @@
   home.stateVersion = "24.11";
 
   #home.packages = with pkgs; [ git ];
-  #sops.secrets = { github_token = { }; };
 
   programs.git = {
     enable = true;
@@ -16,15 +15,15 @@
     extraConfig = {
       init.defaultBranch = "main";
       pull.rebase = true;
-      #   credential.helper = "${
-      #       pkgs.git.override { withLibsecret = true; }
-      #     }/bin/git-credential-libsecret";
-      # };
-      # extraConfig.credential = {
-      #   "https://github.com".username = "masajinobe-ef";
-      #   "https://github.com".helper = ''
-      #     !f() { echo "password=$(cat ${config.sops.secrets.github_token.path})"; }; f'';
-      # };
     };
+  };
+
+  programs.ssh = {
+    enable = true;
+    extraConfig = ''
+      User masa
+      IdentityFile ~/.ssh/id_ed25519
+      IdentitiesOnly yes
+    '';
   };
 }
