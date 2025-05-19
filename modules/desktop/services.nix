@@ -1,5 +1,5 @@
 { lib, ... }:
 
 {
-  #services = lib.mkAfter { };
+  services = { acpid.enable = lib.mkAfter false; };
 }

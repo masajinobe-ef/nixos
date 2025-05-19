@@ -1,5 +1,8 @@
 { lib, ... }:
 
 {
-  #services = lib.mkAfter { auto-cpufreq.enable = true; };
+  services = {
+    auto-cpufreq.enable = lib.mkAfter true;
+    acpid.enable = lib.mkAfter true;
+  };
 }

@@ -41,6 +41,7 @@
         gdm = {
           enable = true;
           wayland = true;
+          settings = { };
         };
         defaultSession = "sway";
       };
@@ -59,7 +60,6 @@
     seatd.enable = true;
     libinput.enable = true;
 
-    acpid.enable = true;
     fstrim.enable = true;
   };
 }
