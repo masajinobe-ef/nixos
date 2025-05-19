@@ -14,7 +14,7 @@
     ../modules/laptop/env.nix
     ../modules/laptop/pkgs.nix
     ../modules/laptop/networking.nix
-    #../modules/laptop/services.nix
+    ../modules/laptop/services.nix
   ];
 
   system.stateVersion = "24.11";
