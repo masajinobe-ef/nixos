@@ -47,7 +47,7 @@ input type:touchpad {
     tap enabled
     natural_scroll enabled
     accel_profile flat
-    pointer_accel -0.3
+    pointer_accel -0.2
 }
 
 seat * {
@@ -128,6 +128,7 @@ exec {
     #ayugram-desktop
     sh -c "redshift"
 }
+exec brightnessctl -q set 40%
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY SWAYSOCK
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY SWAYSOCK
@@ -153,7 +154,7 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 # Screenshot (requires grim / slurp / wl-clipboard)
-bindsym $mod+equal exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+equal exec grim ~/Pictures/$(date +'%Y-%m-%d-%H%M%S.png')
 bindsym $mod+minus exec grim -g "$(slurp)" - | wl-copy
 
 # Brightness control (requires brightnessctl)
