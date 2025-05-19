@@ -15,6 +15,10 @@
     ../modules/laptop/pkgs.nix
     ../modules/laptop/networking.nix
     ../modules/laptop/services.nix
+
+    # Custom
+    #./modules/sing-box.nix
+    #./modules/zapret.nix
   ];
 
   system.stateVersion = "24.11";

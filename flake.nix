@@ -22,9 +22,6 @@
         #sops-nix.nixosModules.sops
         #./system/secrets.nix
 
-        #./system/sing-box.nix
-        #./system/zapret.nix
-
         home-manager.nixosModules.home-manager
         {
           home-manager = {
