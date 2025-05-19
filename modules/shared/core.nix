@@ -16,7 +16,13 @@
     };
   };
 
-  hardware.graphics = { enable = true; };
+  hardware = { graphics = { enable = true; }; };
+
+  services.udev.extraRules = ''
+    # Disable USB wakeup
+    ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", \
+    RUN+="${pkgs.bash}/bin/bash -c 'if [ -f /sys$env{DEVPATH}/power/wakeup ]; then echo disabled > /sys$env{DEVPATH}/power/wakeup; fi'"
+  '';
 
   users.users.masa = {
     isNormalUser = true;

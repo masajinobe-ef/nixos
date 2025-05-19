@@ -8,7 +8,7 @@
       timeout = 2;
     };
 
-    kernelModules = [ "tun" ];
+    kernelModules = [ "tun" "tproxy" ];
 
     kernelParams = [
       "loglevel=4"

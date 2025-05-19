@@ -36,6 +36,7 @@
     tree
     yazi
     ueberzugpp
+    libcap
 
     # --- Networking & Privacy ---
     wget
@@ -44,6 +45,12 @@
     dnscrypt-proxy
     dnsutils
     sing-box
+    v2ray
+    v2raya
+    gvisor
+    zapret
+    iptables
+    nftables
 
     # --- System Management ---
     acpid

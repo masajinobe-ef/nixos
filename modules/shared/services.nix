@@ -30,14 +30,10 @@
       };
     };
 
+    #v2ray.enable = true;
+    #v2raya.enable = true;
+    #zapret.enable = true;
     resolved.enable = true;
-    dbus.enable = true;
-    gvfs.enable = true;
-    gnome.gnome-keyring.enable = true;
-    seatd.enable = true;
-    libinput.enable = true;
-    acpid.enable = true;
-    fstrim.enable = true;
 
     xserver = {
       enable = true;
@@ -56,5 +52,14 @@
       alsa.enable = true;
       pulse.enable = true;
     };
+
+    dbus.enable = true;
+    gvfs.enable = true;
+    gnome.gnome-keyring.enable = true;
+    seatd.enable = true;
+    libinput.enable = true;
+
+    acpid.enable = true;
+    fstrim.enable = true;
   };
 }

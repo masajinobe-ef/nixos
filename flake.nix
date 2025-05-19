@@ -23,6 +23,7 @@
         ./system/secrets.nix
 
         #./system/sing-box.nix
+        #./system/zapret.nix
 
         home-manager.nixosModules.home-manager
         {

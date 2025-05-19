@@ -3,6 +3,9 @@
 {
   networking = {
     enableIPv6 = false;
+    nameservers = [ "8.8.8.8" "8.8.4.4" ];
+    resolvconf.dnsSingleRequest = true;
+    #nftables.enable = true;
 
     networkmanager = { enable = true; };
 
@@ -11,7 +14,6 @@
         address = "192.168.0.201";
         prefixLength = 24;
       }];
-      wakeOnLan.policy = [ "magic" ];
     };
 
     defaultGateway = {
