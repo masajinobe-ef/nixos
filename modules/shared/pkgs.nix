@@ -74,8 +74,10 @@
     libvdpau-va-gl
 
     # --- Desktop Environment ---
-    gnome-shell
+    gnome-keyring
     gnome-session
+    gnome-shell
+    gnome-control-center
     xdg-utils
     redshift
     papirus-icon-theme

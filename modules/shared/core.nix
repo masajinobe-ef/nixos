@@ -16,8 +16,6 @@
     };
   };
 
-  console.font = "Lat2-Terminus16";
-
   hardware = { graphics = { enable = true; }; };
 
   services.udev.extraRules = ''
@@ -45,7 +43,7 @@
   };
 
   security = {
-    pam.services = { };
+    pam.services = { gdm.enableGnomeKeyring = true; };
     polkit.enable = true;
     sudo.wheelNeedsPassword = false;
   };

@@ -56,6 +56,10 @@ seat * {
 
 output * {
     mode 1366x768@60Hz
+    dpms on
+    dpms standby 300
+    dpms suspend 600
+    dpms off 0
     #bg ~/Wallpapers/pc/wallhaven-l83gly.png fill
 }
 
