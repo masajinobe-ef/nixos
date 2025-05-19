@@ -6,8 +6,8 @@
       enable = true;
       ports = [ 33677 ];
       settings = {
-        IdentityFile = "~/.ssh/id_ed25519"
-        IdentitiesOnly = "yes"
+        IdentityFile = "~/.ssh/id_ed25519";
+        IdentitiesOnly = "yes";
         AddressFamily = "inet";
         Protocol = 2;
         SyslogFacility = "AUTH";
