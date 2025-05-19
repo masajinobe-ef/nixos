@@ -19,9 +19,10 @@
   hardware = { graphics = { enable = true; }; };
 
   services.udev.extraRules = ''
-    # Disable USB wakeup
-    ACTION=="add", SUBSYSTEM=="usb", DRIVER=="usb", \
-    RUN+="${pkgs.bash}/bin/bash -c 'if [ -f /sys$env{DEVPATH}/power/wakeup ]; then echo disabled > /sys$env{DEVPATH}/power/wakeup; fi'"
+    # Disable wakeup for all USB devices
+    ACTION=="add", SUBSYSTEM=="usb", TEST=="power/wakeup", ATTR{power/wakeup}="disabled"
+    # Disable wakeup for USB controllers (xHCI)
+    ACTION=="add", SUBSYSTEM=="pci", DRIVER=="xhci_hcd", ATTR{power/wakeup}="disabled"
   '';
 
   users.users.masa = {
