@@ -74,6 +74,7 @@
     libvdpau-va-gl
 
     # --- Desktop Environment ---
+    gnome-shell
     gnome-session
     xdg-utils
     redshift
