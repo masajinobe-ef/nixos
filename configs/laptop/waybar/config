@@ -24,11 +24,11 @@
     },
 
     "network": {
-        "interface": "enp42s0*",
+        "interface": "wlp2s0*",
         "format": "{ifname}",
-        "format-wifi": "",
-        "format-ethernet": "󰈁  {ipaddr}",
-        "format-linked": "󰈁  (No IP)",
+        "format-wifi": "  {ipaddr}",
+        "format-ethernet": "󰈁 {ipaddr}",
+        "format-linked": "󰈁 (No IP)",
         "format-disconnected": "󰖪",
         "tooltip-format": "Ethernet: {ifname}\nIP: {ipaddr}/{cidr}",
         "interval": 5
