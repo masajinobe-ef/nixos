@@ -14,16 +14,22 @@ nix flake check
 
 ## Build from local dir after git clone
 
-desktop build
+desktop build:
 
 ```sh
 sudo nixos-rebuild switch --flake .#desktop
 ```
 
-laptop build
+laptop build:
 
 ```sh
 sudo nixos-rebuild switch --flake .#laptop
+```
+
+Post-install script for init secrets:
+
+```sh
+sudo chmod +x secrets.sh && ./secrets.sh
 ```
 
 # Rebuild from remote / Deploy on another host machine
