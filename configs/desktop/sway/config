@@ -144,3 +144,7 @@ bindsym $mod+e exec rofi -show combi -combi-modes drun
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+# Screenshot (requires grim / slurp / wl-clipboard)
+bindsym $mod+equal exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+minus exec grim -g "$(slurp)" - | wl-copy

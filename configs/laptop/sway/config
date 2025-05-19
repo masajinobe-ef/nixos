@@ -43,12 +43,19 @@ input type:pointer {
     pointer_accel -0.3
 }
 
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    accel_profile flat
+    pointer_accel -0.3
+}
+
 seat * {
     xcursor_theme Adwaita 24
 }
 
 output * {
-    mode 1920x1080@144Hz
+    mode 1366x768@60Hz
     #bg ~/Wallpapers/pc/wallhaven-l83gly.png fill
 }
 
@@ -113,8 +120,8 @@ for_window [app_id="MEGAsync"] floating enable
 ### ======================= Autostart ======================= ###
 exec {
     alacritty -e zsh -c "tmux has-session -t WORKFLOW 2>/dev/null && tmux attach -t WORKFLOW || tmux new-session -s WORKFLOW -n 'zsh' 'zsh -i'"
-    firefox
-    ayugram-desktop
+    #firefox
+    #ayugram-desktop
     sh -c "redshift"
 }
 
@@ -140,3 +147,13 @@ bindsym $mod+e exec rofi -show combi -combi-modes drun
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+# Screenshot (requires grim / slurp / wl-clipboard)
+bindsym $mod+equal exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+minus exec grim -g "$(slurp)" - | wl-copy
+
+# Brightness control (requires brightnessctl)
+bindsym XF86MonBrightnessUp exec brightnessctl -q set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl -q set 5%-
+bindsym XF86KbdBrightnessUp   exec brightnessctl -d '*::kbd_backlight' set +5%
+bindsym XF86KbdBrightnessDown exec brightnessctl -d '*::kbd_backlight' set 5%-

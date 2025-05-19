@@ -9,7 +9,7 @@ dynamic_padding = true
 program = "/run/current-system/sw/bin/zsh"
 
 [font]
-size = 14
+size = 12
 normal = { family = "JetbrainsMono Nerd Font", style = "Regular" }
 bold = { family = "JetbrainsMono Nerd Font", style = "Bold" }
 italic = { family = "JetbrainsMono Nerd Font", style = "italic" }
