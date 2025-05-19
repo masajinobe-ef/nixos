@@ -14,13 +14,13 @@ nix flake check
 
 ## Build from local dir after git clone
 
-desktop build:
+Desktop build:
 
 ```sh
 sudo nixos-rebuild switch --flake .#desktop
 ```
 
-laptop build:
+Laptop build:
 
 ```sh
 sudo nixos-rebuild switch --flake .#laptop
