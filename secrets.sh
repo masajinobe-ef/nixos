@@ -59,6 +59,7 @@ if [ ! -s "$SOPS_DIR/secrets.yaml" ]; then
 sing-box-uuid: "REPLACE_ME"
 sing-box-public-key: "REPLACE_ME"
 sing-box-short-id: "REPLACE_ME"
+github_token: "REPLACE_ME"
 EOF
 
     # Encrypt the secrets file using SOPS

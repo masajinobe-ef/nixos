@@ -34,13 +34,13 @@ sudo chmod +x secrets.sh && ./secrets.sh
 
 # Rebuild from remote / Deploy on another host machine
 
-desktop build
+Desktop build
 
 ```sh
 sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#desktop
 ```
 
-laptop build
+Laptop build
 
 ```sh
 sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#laptop
