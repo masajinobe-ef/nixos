@@ -103,6 +103,5 @@
     # --- Applications ---
     firefox
     ayugram-desktop
-    megasync
   ];
 }
