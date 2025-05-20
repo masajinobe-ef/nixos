@@ -20,7 +20,7 @@
       system = "x86_64-linux";
       commonModules = [
         #sops-nix.nixosModules.sops
-        #./system/secrets.nix
+        #./system/secrets.nix # TODO:
 
         home-manager.nixosModules.home-manager
         {
@@ -30,6 +30,7 @@
             users.masa = ./users/masa/home.nix;
             extraSpecialArgs = { inherit inputs; };
           };
+
         }
       ];
     in {

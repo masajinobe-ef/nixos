@@ -11,7 +11,6 @@
     gcc
     clang
     gnumake
-    rustup
     go
     python313
     nodejs
@@ -20,6 +19,10 @@
     docker
     jq
     yq
+    cmake
+    llvm
+    lld
+    libiconv
 
     # --- Terminal Environment ---
     alacritty
