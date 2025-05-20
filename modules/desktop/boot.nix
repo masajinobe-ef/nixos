@@ -19,7 +19,6 @@
       "amd_pstate=active"
       "cpufreq.default_governor=performance"
       "ipv6.disable=1"
-      "pci=noacpi"
     ];
   };
 }

@@ -140,6 +140,8 @@
             tmux-sessionizer
             zle reset-prompt
         }
+        zle -N tmux-sessionizer-widget
+        bindkey '^F' tmux-sessionizer-widget     # Ctrl+f
 
         yazi-widget() {
             local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -149,20 +151,26 @@
             fi
             ${pkgs.coreutils}/bin/rm -f -- "$tmp"
         }
+        zle -N yazi-widget
+        bindkey '^Y' yazi-widget                 # Ctrl+y
 
         nvim-widget() {
             zle clear-screen
             nvim
             zle reset-prompt
         }
-
-        zle -N tmux-sessionizer-widget
-        zle -N yazi-widget
         zle -N nvim-widget
-
-        bindkey '^F' tmux-sessionizer-widget     # Ctrl+f
-        bindkey '^Y' yazi-widget                 # Ctrl+y
         bindkey '^N' nvim-widget                 # Ctrl+n
+
+        tmux-widget() {
+            zle clear-screen
+            tmux
+            zle reset-prompt
+        }
+        zle -N tmux-widget
+        bindkey '^N' tmux-widget                 # Ctrl+n
+
+
         bindkey -s '^P' "clear; gitpush\n"       # Ctrl+p
 
         # Standard bindings
