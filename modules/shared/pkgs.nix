@@ -13,6 +13,7 @@
     gnumake
     go
     python313
+    ruff
     nodejs
     pnpm
     uv
