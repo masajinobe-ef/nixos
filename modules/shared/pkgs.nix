@@ -64,6 +64,8 @@
     lynis
 
     # --- Media & Graphics ---
+    xfce.ristretto
+    xfce.tumbler
     ffmpeg
     yt-dlp
     mpv

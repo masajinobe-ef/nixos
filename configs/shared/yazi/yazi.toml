@@ -17,19 +17,25 @@ image = "ueberzugpp"
 edit_nvim = [
     { run = '${EDITOR:=nvim} "$@"', desc = "Edit (nvim)", block = true },
 ]
-play = [{ run = 'mpv --force-window "$@"', desc = "Play (mpv)", orphan = true }]
-view = [
-    { run = 'feh --draw-filename --fullscreen --no-fehbg "$@"', desc = "View (feh)", block = true },
+
+play_vlc = [{ run = 'vlc "$@"', desc = "Play (VLC)", orphan = true }]
+play_mpv = [{ run = 'mpv --force-window "$@"', desc = "Play (mpv)", orphan = true }]
+
+view_ristretto = [
+    { run = 'ristretto "$@"', desc = "View (Ristretto)", block = true },
 ]
+
 reveal = [
     { run = 'alacritty --working-directory="$(dirname "$1")" &', desc = "Dir", orphan = true },
 ]
+
 archive_zip = [
     { run = 'zip -r "${1%.zip}.zip" "$@"', desc = "Archive (zip)", block = true },
 ]
 extract_zip = [
     { run = 'unzip "$1" -d "${1%.*}"', desc = "Extract (unzip)", block = true },
 ]
+
 archive_7z = [
     { run = '7z a "${1%.7z}.7z" "$@"', desc = "Archive (7z)", block = true },
 ]
@@ -64,13 +70,14 @@ rules = [
         "archive_7z",
     ] },
     { mime = "image/*", use = [
-        "view",
+        "view_ristretto",
         "reveal",
         "archive_zip",
         "archive_7z",
     ] },
     { mime = "{audio,video}/*", use = [
-        "play",
+        "play_vlc",
+        "play_mpv",
         "reveal",
         "archive_zip",
         "archive_7z",
