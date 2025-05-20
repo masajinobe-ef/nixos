@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # --- Development Tools ---
+    # Development Tools
     vim
     neovim
     git
@@ -14,6 +14,9 @@
     go
     python313
     ruff
+    ruff-lsp
+    prettierd
+    stylua
     nodejs
     pnpm
     uv
@@ -25,13 +28,11 @@
     lld
     libiconv
 
-    # --- Terminal Environment ---
+    # Terminal Utilities
     alacritty
     zsh
     tmux
     tmuxp
-
-    # --- CLI Utilities ---
     eza
     fzf
     fd
@@ -42,7 +43,7 @@
     ueberzugpp
     libcap
 
-    # --- Networking & Privacy ---
+    # Networking & Security
     wget
     qbittorrent
     dnsmasq
@@ -55,18 +56,21 @@
     zapret
     iptables
     nftables
-
-    # --- System Management ---
     acpid
+
+    # System Utilities & Security
     fastfetch
     btop
     sops
     age
     lynis
 
-    # --- Media & Graphics ---
+    # Multimedia & Graphics
     xfce.ristretto
     xfce.tumbler
+    krita
+    obs-studio
+    inkscape
     ffmpeg
     yt-dlp
     mpv
@@ -79,7 +83,7 @@
     libva-utils
     libvdpau-va-gl
 
-    # --- Desktop Environment ---
+    # Desktop Environment & Wayland Tools
     gnome-keyring
     gnome-session
     gnome-shell
@@ -88,8 +92,6 @@
     redshift
     papirus-icon-theme
     qt5.qtwayland
-
-    # --- Wayland Ecosystem ---
     wl-clipboard
     grim
     slurp
@@ -100,17 +102,16 @@
     mako
     swaybg
 
-    # --- Archive Handling ---
+    # Archive Utilities
     p7zip
     unrar
     zip
     unzip
 
-    # --- Audio Control ---
+    # Audio
     pavucontrol
 
-    # --- Applications ---
+    # Web Browser
     firefox
-    ayugram-desktop
   ];
 }

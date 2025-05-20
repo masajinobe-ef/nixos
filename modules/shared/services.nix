@@ -47,7 +47,6 @@
       };
     };
 
-    pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;

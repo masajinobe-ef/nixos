@@ -16,7 +16,7 @@
     };
   };
 
-  hardware = { graphics = { enable = true; }; };
+  hardware = { graphics = { enable = true; }; pulseaudio.enable = false; };
 
   services.udev.extraRules = ''
     # Disable wakeup for all USB devices
@@ -72,7 +72,6 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
-      nerd-fonts.jetbrains-mono
     ];
     fontconfig = {
       defaultFonts = {

@@ -16,9 +16,6 @@
     ../modules/desktop/networking.nix
     ../modules/desktop/services.nix
 
-    # Custom
-    #./modules/sing-box.nix
-    #./modules/zapret.nix
   ];
 
   system.stateVersion = "24.11";
