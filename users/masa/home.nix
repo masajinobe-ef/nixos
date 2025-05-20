@@ -113,6 +113,15 @@
 
       initContent = ''
         # ------------------------------------------------------------------------------
+        # TMUX CONFIGURATION
+        # ------------------------------------------------------------------------------
+        export TERM=$ZSH_TMUX_TERM
+
+        if [[ -z "$TMUX" ]] && command -v tmux &> /dev/null; then
+          tmux attach -t default || tmux new -s default
+        fi
+
+        # ------------------------------------------------------------------------------
         # PROMPT CONFIGURATION
         # ------------------------------------------------------------------------------
         autoload -Uz colors && colors
@@ -162,15 +171,7 @@
         zle -N nvim-widget
         bindkey '^N' nvim-widget                 # Ctrl+n
 
-        tmux-widget() {
-            zle clear-screen
-            tmux
-            zle reset-prompt
-        }
-        zle -N tmux-widget
-        bindkey '^N' tmux-widget                 # Ctrl+n
-
-
+        # Git push
         bindkey -s '^P' "clear; gitpush\n"       # Ctrl+p
 
         # Standard bindings
