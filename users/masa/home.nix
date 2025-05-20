@@ -19,6 +19,10 @@
     "$HOME/.local/share"
   ];
 
+  home.sessionVariables = {
+    #
+  };
+
   programs = {
     alacritty = {
       enable = true;
@@ -150,12 +154,20 @@
             ${pkgs.coreutils}/bin/rm -f -- "$tmp"
         }
 
+        nvim-widget() {
+            zle clear-screen
+            nvim
+            zle reset-prompt
+        }
+
         zle -N tmux-sessionizer-widget
         zle -N yazi-widget
+        zle -N nvim-widget
 
-        bindkey '^F' tmux-sessionizer-widget               # Ctrl+F
-        bindkey '^Y' yazi-widget                           # Ctrl+Y
-        bindkey -s '^P' "clear; gitpush\n"                 # Ctrl+P
+        bindkey '^F' tmux-sessionizer-widget     # Ctrl+f
+        bindkey '^Y' yazi-widget                 # Ctrl+y
+        bindkey '^N' nvim-widget                 # Ctrl+n
+        bindkey -s '^P' "clear; gitpush\n"       # Ctrl+p
 
         # Standard bindings
         bindkey '^I' expand-or-complete          # Tab
@@ -167,16 +179,6 @@
         # TOOL INITIALIZATIONS
         # ------------------------------------------------------------------------------
         eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"
-
-        # Yazi wrapper function
-        function y() {
-          local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-          ${pkgs.yazi}/bin/yazi "$@" --cwd-file="$tmp"
-          if cwd="$(${pkgs.coreutils}/bin/cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-            builtin cd -- "$cwd"
-          fi
-          ${pkgs.coreutils}/bin/rm -f -- "$tmp"
-        }
       '';
 
       shellAliases = {
@@ -195,11 +197,6 @@
         untar = "tar -xvvf";
         zz = "zip -r";
         uz = "unzip";
-      };
-
-      sessionVariables = {
-        TERM = "xterm-256color";
-        DISABLE_AUTO_TITLE = "true";
       };
     };
 
