@@ -19,10 +19,6 @@
     "$HOME/.local/share"
   ];
 
-  home.sessionVariables = {
-    #
-  };
-
   programs = {
     alacritty = {
       enable = true;

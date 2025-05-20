@@ -116,7 +116,7 @@ for_window [app_id="MEGAsync"] floating enable
 
 ### ======================= Autostart ======================= ###
 exec {
-    alacritty -e zsh -c "tmux has-session -t WORKFLOW 2>/dev/null && tmux attach -t WORKFLOW || tmux new-session -s WORKFLOW -n 'zsh' 'zsh -i'"
+    alacritty
     firefox
     ayugram-desktop
     sh -c "redshift"
