@@ -12,6 +12,10 @@
     zsh-syntax-highlighting
   ];
 
+  home.sessionVariables = {
+    #ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
+  };
+
   home.sessionPath = [
     "$HOME/.personal/sh"
     "$HOME/.local/bin"

@@ -15,6 +15,7 @@
     python313
     ruff
     ruff-lsp
+    nixfmt-rfc-style
     prettierd
     stylua
     nodejs
@@ -49,11 +50,7 @@
     dnsmasq
     dnscrypt-proxy
     dnsutils
-    sing-box
-    v2ray
-    v2raya
     gvisor
-    zapret
     iptables
     nftables
     acpid

@@ -21,8 +21,12 @@
   services.udev.extraRules = ''
     # Disable wakeup for all USB devices
     ACTION=="add", SUBSYSTEM=="usb", TEST=="power/wakeup", ATTR{power/wakeup}="disabled"
+
     # Disable wakeup for USB controllers (xHCI)
-    ACTION=="add", SUBSYSTEM=="pci", DRIVER=="xhci_hcd", ATTR{power/wakeup}="disabled"
+    #ACTION=="add", SUBSYSTEM=="pci", DRIVER=="xhci_hcd", ATTR{power/wakeup}="disabled"
+
+    # Ensure TUN device exists (optional but recommended)
+    KERNEL=="tun", GROUP="tun", MODE="0660"
   '';
 
   users.users.masa = {

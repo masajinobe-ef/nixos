@@ -30,10 +30,12 @@
       };
     };
 
-    #v2ray.enable = true;
-    #v2raya.enable = true;
-    #zapret.enable = true;
-    resolved.enable = true;
+    resolved = {
+        enable = true;
+        dnssec = "allow-downgrade";
+        fallbackDns = [ "8.8.8.8" ];
+        domains = [ "~." ];
+    };
 
     xserver = {
       enable = true;
