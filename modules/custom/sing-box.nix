@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  services.sing-box.enable = true;
+  services.sing-box.enable = false;
 
   systemd.services.sing-box = {
     environment = {
@@ -11,8 +11,19 @@
       Restart = "on-failure";
       RestartSec = "5s";
       DeviceAllow = "/dev/net/tun rw";
+      # ExecStartPre = lib.mkForce [
+      #   "${pkgs.iproute2}/bin/ip route del default via 192.168.0.1 dev enp42s0"
+      #   "${pkgs.iproute2}/bin/ip route add default via 172.19.0.1 dev tun0 metric 0"
+      # ];
+      # ExecStopPost = lib.mkForce [
+      #   "${pkgs.iproute2}/bin/ip route add default via 192.168.0.1 dev enp42s0 metric 0"
+      #   "${pkgs.iproute2}/bin/ip route del default via 172.19.0.1 dev tun0"
+      # ];
     };
-    after = [ "network.target" "sops-nix.service" ];
+    after = lib.mkForce [
+     "network.target"
+     # "sops-nix.service"
+    ];
   };
 
   # sops.secrets = {
@@ -71,7 +82,7 @@
       mtu = 1500;
       sniff = true;
       sniff_override_destination = false;
-      stack = "system";
+      stack = "gvisor";
       tag = "tun-in";
       type = "tun";
     }
@@ -86,7 +97,7 @@
     }
   ];
 
-  log.level = "debug";
+  log.level = "info";
 
   outbounds = [
     {
@@ -99,8 +110,8 @@
         insecure = false;
         reality = {
           enabled = true;
-          public_key = "VuPgrhpkKCAIJkkYMHEQ71doZApZVAeYsdhCy0orMDI";
-          short_id = "cdb4c53e0799c7a3";
+          public_key = "";
+          short_id = "";
         };
         server_name = "www.google.com";
         utls = {
@@ -108,7 +119,7 @@
           fingerprint = "chrome";
         };
       };
-      uuid = "4629b184-c38f-4916-b4ac-c4730e45c75f";
+      uuid = "";
       type = "vless";
       domain_strategy = "prefer_ipv4";
       tag = "proxy";

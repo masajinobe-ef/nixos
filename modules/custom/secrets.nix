@@ -24,11 +24,6 @@
         mode = "0400";
       };
 
-      "github_token" = {
-        owner = "masa";
-        path = "/home/masa/.personal/github/token";
-        mode = "0400";
-      };
     };
   };
 }

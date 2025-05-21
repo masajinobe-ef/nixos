@@ -30,11 +30,12 @@
       };
     };
 
+    # systemd-resolved configuration
     resolved = {
-        enable = true;
-        dnssec = "allow-downgrade";
-        fallbackDns = [ "8.8.8.8" ];
-        domains = [ "~." ];
+      enable = false;                     # Enable DNS resolver service
+      dnssec = "allow-downgrade";        # DNSSEC compatibility mode
+      fallbackDns = [ "8.8.8.8" ];        # Fallback to Google DNS if primary fails
+      domains = [ "~." ];                # Handle all domains by default
     };
 
     xserver = {

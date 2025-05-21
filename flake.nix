@@ -30,6 +30,8 @@
       system = "x86_64-linux";
       commonModules = [
 
+        #./modules/custom/secrets.nix
+
         # Home Manager
         home-manager.nixosModules.home-manager
         {

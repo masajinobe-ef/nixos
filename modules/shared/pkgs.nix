@@ -54,6 +54,7 @@
     iptables
     nftables
     acpid
+    iproute2
 
     # System Utilities & Security
     fastfetch

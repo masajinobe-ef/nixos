@@ -24,9 +24,6 @@
 
     # Disable wakeup for USB controllers (xHCI)
     #ACTION=="add", SUBSYSTEM=="pci", DRIVER=="xhci_hcd", ATTR{power/wakeup}="disabled"
-
-    # Ensure TUN device exists (optional but recommended)
-    KERNEL=="tun", GROUP="tun", MODE="0660"
   '';
 
   users.users.masa = {

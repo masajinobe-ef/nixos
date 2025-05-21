@@ -16,7 +16,7 @@
     ../modules/desktop/networking.nix
     ../modules/desktop/services.nix
 
-    ../modules/custom/sing-box.nix
+    #../modules/custom/sing-box.nix
   ];
 
   system.stateVersion = "24.11";
