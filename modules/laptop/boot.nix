@@ -9,6 +9,7 @@
     };
 
     kernelModules = [ "tun" "tproxy" ];
+    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
 
     kernelParams = [
       "loglevel=4"

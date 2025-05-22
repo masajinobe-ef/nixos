@@ -43,6 +43,9 @@
     yazi
     ueberzugpp
     libcap
+    ventoy-full
+    woeusb
+    ntfs3g
 
     # Networking & Security
     wget

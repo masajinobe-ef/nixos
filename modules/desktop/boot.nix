@@ -9,6 +9,7 @@
     };
 
     kernelModules = [ "tun" "tproxy" ];
+    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
 
     kernelPackages = pkgs.linuxPackages_zen;
 
