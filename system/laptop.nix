@@ -8,6 +8,9 @@
     ../modules/shared/pkgs.nix
     ../modules/shared/env.nix
 
+    # Include hardware configuration
+    /etc/nixos/hardware-configuration.nix
+
     # Laptop
     ../hosts/laptop/default.nix
     ../modules/laptop/boot.nix

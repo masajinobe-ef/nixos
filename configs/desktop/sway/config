@@ -49,7 +49,7 @@ seat * {
 
 output * {
     mode 1920x1080@144Hz
-    bg ~/Pictures/bg.png fill
+    #bg ~/Pictures/bg.png fill
 }
 
 ### ======================= Key Bindings ======================= ###

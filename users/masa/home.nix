@@ -24,6 +24,13 @@
   ];
 
   programs = {
+    firefox = {
+      enable = true;
+      extraOptions = [
+        "--browser.uidensity=1"
+      ];
+    };
+
     alacritty = {
       enable = true;
       settings = {
