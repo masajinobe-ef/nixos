@@ -30,12 +30,11 @@
       };
     };
 
-    # systemd-resolved configuration
     resolved = {
-      enable = false;                     # Enable DNS resolver service
-      dnssec = "allow-downgrade";        # DNSSEC compatibility mode
-      fallbackDns = [ "8.8.8.8" ];        # Fallback to Google DNS if primary fails
-      domains = [ "~." ];                # Handle all domains by default
+      enable = false;
+      dnssec = "allow-downgrade";
+      fallbackDns = [ "8.8.8.8" ];
+      domains = [ "~." ];
     };
 
     xserver = {
@@ -44,7 +43,6 @@
         gdm = {
           enable = true;
           wayland = true;
-          settings = { };
         };
         defaultSession = "sway";
       };
@@ -53,7 +51,9 @@
     pipewire = {
       enable = true;
       alsa.enable = true;
+      alsa.support32Bit = true;
       pulse.enable = true;
+      #jack.enable = true;
     };
 
     dbus.enable = true;

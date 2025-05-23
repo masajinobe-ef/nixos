@@ -17,13 +17,13 @@ nix flake check
 Desktop build:
 
 ```sh
-sudo nixos-rebuild switch --flake .#desktop
+sudo nixos-rebuild switch --flake .#desktop --impure
 ```
 
 Laptop build:
 
 ```sh
-sudo nixos-rebuild switch --flake .#laptop
+sudo nixos-rebuild switch --flake .#laptop --impure
 ```
 
 Post-install script for init secrets:
@@ -37,11 +37,11 @@ sudo chmod +x secrets.sh && ./secrets.sh
 Desktop build
 
 ```sh
-sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#desktop
+sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#desktop --impure
 ```
 
 Laptop build
 
 ```sh
-sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#laptop
+sudo nixos-rebuild switch --flake github:masajinobe-ef/nixos#laptop --impure
 ```

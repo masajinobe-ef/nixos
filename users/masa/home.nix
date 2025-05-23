@@ -24,12 +24,19 @@
   ];
 
   programs = {
-    firefox = {
-      enable = true;
-      extraOptions = [
-        "--browser.uidensity=1"
-      ];
-    };
+    # firefox = {
+    #   enable = true;
+    #   profiles = {
+    #     default = {
+    #       id = 0;
+    #       name = "default";
+    #       isDefault = true;
+    #       settings = {
+    #         "browser.uidensity" = 1;
+    #       };
+    #     };
+    #   };
+    # };
 
     alacritty = {
       enable = true;
