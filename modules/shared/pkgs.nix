@@ -16,6 +16,7 @@
     ruff
     ruff-lsp
     nixfmt-rfc-style
+    nixfmt-classic
     prettierd
     stylua
     nodejs
@@ -28,8 +29,6 @@
     llvm
     lld
     libiconv
-
-    # Terminal Utilities
     alacritty
     zsh
     tmux
@@ -46,8 +45,6 @@
     ventoy-full
     woeusb
     ntfs3g
-
-    # Networking & Security
     wget
     qbittorrent
     dnsmasq
@@ -58,15 +55,11 @@
     nftables
     acpid
     iproute2
-
-    # System Utilities & Security
     fastfetch
     btop
     sops
     age
     lynis
-
-    # Multimedia & Graphics
     xfce.ristretto
     xfce.tumbler
     krita
@@ -83,8 +76,7 @@
     libva
     libva-utils
     libvdpau-va-gl
-
-    # Desktop Environment & Wayland Tools
+    libvpx
     gnome-keyring
     gnome-session
     gnome-shell
@@ -102,17 +94,11 @@
     rofi-wayland
     mako
     swaybg
-
-    # Archive Utilities
     p7zip
     unrar
     zip
     unzip
-
-    # Audio
     pavucontrol
-
-    # Web Browser
     firefox
   ];
 }

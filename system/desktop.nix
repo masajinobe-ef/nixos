@@ -17,7 +17,6 @@
     ../modules/desktop/pkgs.nix
     ../modules/desktop/networking.nix
     ../modules/desktop/services.nix
-
   ];
 
   system.stateVersion = "24.11";

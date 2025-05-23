@@ -7,10 +7,9 @@
       efi.canTouchEfiVariables = true;
       timeout = 2;
     };
-
     kernelModules = [ "tun" "tproxy" ];
     supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
-
+    initrd.kernelModules = [ "vfat" "i915" ];
     kernelParams = [
       "loglevel=4"
       "mitigations=off"
@@ -23,7 +22,6 @@
       "processor.max_cstate=5"
       "usbcore.autosuspend=1"
     ];
-
     blacklistedKernelModules = [
       "ssb"
       "mmc_core"
@@ -35,10 +33,8 @@
       "bcma"
       "iTCO_wdt"
       "iTCO_vendor_support"
+      #"r8169"
     ];
-
-    initrd.kernelModules = [ "vfat" "i915" ];
-
     extraModprobeConfig = ''
       options hid_apple fnmode=2 iso_layout=1
       options usbcore autosuspend=1
