@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
-  nixpkgs.config = { allowUnfree = true; };
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 
   nix = {
     gc = {
@@ -12,11 +14,19 @@
 
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 
-  hardware = { graphics = { enable = true; }; pulseaudio.enable = false; };
+  hardware = {
+    graphics = {
+      enable = true;
+    };
+    pulseaudio.enable = false;
+  };
 
   services.udev.extraRules = ''
     # Disable wakeup for all USB devices
@@ -29,8 +39,14 @@
   users.users.masa = {
     isNormalUser = true;
     description = "masa";
-    extraGroups =
-      [ "networkmanager" "wheel" "seat" "audio" "realtime" "input" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "seat"
+      "audio"
+      "realtime"
+      "input"
+    ];
   };
 
   programs.sway = {
@@ -45,7 +61,9 @@
   };
 
   security = {
-    pam.services = { gdm.enableGnomeKeyring = true; };
+    pam.services = {
+      gdm.enableGnomeKeyring = true;
+    };
     polkit.enable = true;
     sudo.wheelNeedsPassword = false;
     rtkit.enable = true;
@@ -54,7 +72,10 @@
   time.timeZone = "Asia/Yekaterinburg";
   i18n = {
     defaultLocale = "en_US.UTF-8";
-    supportedLocales = [ "en_US.UTF-8/UTF-8" "ru_RU.UTF-8/UTF-8" ];
+    supportedLocales = [
+      "en_US.UTF-8/UTF-8"
+      "ru_RU.UTF-8/UTF-8"
+    ];
     extraLocaleSettings = {
       LC_ADDRESS = "en_US.UTF-8";
       LC_IDENTIFICATION = "en_US.UTF-8";

@@ -8,9 +8,16 @@
       timeout = 2;
     };
     kernelPackages = pkgs.linuxPackages_zen;
-    kernelModules = [ "tun" "tproxy" ];
+    kernelModules = [
+      "tun"
+      "tproxy"
+    ];
     #blacklistedKernelModules = [ "r8169" ];
-    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
+    supportedFilesystems = [
+      "ntfs"
+      "vfat"
+      "fusefs"
+    ];
     kernelParams = [
       "loglevel=4"
       "mitigations=off"

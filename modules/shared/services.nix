@@ -11,7 +11,10 @@
         SyslogFacility = "AUTH";
         LogLevel = "VERBOSE";
         KexAlgorithms = [ "curve25519-sha256" ];
-        Ciphers = [ "chacha20-poly1305@openssh.com" "aes256-gcm@openssh.com" ];
+        Ciphers = [
+          "chacha20-poly1305@openssh.com"
+          "aes256-gcm@openssh.com"
+        ];
         Macs = [ "hmac-sha2-512-etm@openssh.com" ];
         PermitRootLogin = "prohibit-password";
         PubkeyAuthentication = true;

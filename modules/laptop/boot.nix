@@ -7,9 +7,19 @@
       efi.canTouchEfiVariables = true;
       timeout = 2;
     };
-    kernelModules = [ "tun" "tproxy" ];
-    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
-    initrd.kernelModules = [ "vfat" "i915" ];
+    kernelModules = [
+      "tun"
+      "tproxy"
+    ];
+    supportedFilesystems = [
+      "ntfs"
+      "vfat"
+      "fusefs"
+    ];
+    initrd.kernelModules = [
+      "vfat"
+      "i915"
+    ];
     kernelParams = [
       "loglevel=4"
       "mitigations=off"

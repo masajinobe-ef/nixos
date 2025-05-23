@@ -99,13 +99,12 @@
     unzip
     pavucontrol
     firefox
-  stylua
-  shfmt
-  nixfmt
-  ruff
-  ktlint
-  clang-tools
-  prettierd
-  codespell
+    stylua
+    shfmt
+    ruff
+    ktlint
+    clang-tools
+    prettierd
+    codespell
   ];
 }
