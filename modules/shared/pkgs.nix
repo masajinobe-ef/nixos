@@ -106,5 +106,23 @@
     clang-tools
     prettierd
     codespell
+dockerfile-language-server-nodejs
+    nodePackages.bash-language-server
+    vscode-langservers-extracted
+    python3Packages.python-lsp-server
+    ruff
+    clang-tools
+    nil
+    taplo-cli
+    gopls
+    kotlin-language-server
+    rust-analyzer
+    sqls
+    tailwindcss-language-server
+    typescript-language-server
+    yaml-language-server
+    marksman
+    shellcheck
+    stylua
   ];
 }
