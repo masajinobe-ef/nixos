@@ -3,14 +3,18 @@
     "position": "top",
     "height": 24,
     "spacing": 4,
-    "modules-left": ["sway/workspaces"],
-    "modules-center": ["sway/window"],
-    "modules-right": [
-        "network",
+    "modules-left": [
+        "sway/workspaces",
+        "network"
+    ],
+    "modules-center": [
+        "tray",
         "pulseaudio",
+    ],
+    "modules-right": [
         "memory",
-        "clock",
-        "tray"
+        "battery",
+        "clock"
     ],
 
     "sway/workspaces": {
@@ -24,7 +28,7 @@
     },
 
     "network": {
-        "interface": "wlp2s0*",
+        "interface": "enp42s0*",
         "format": "{ifname}",
         "format-wifi": "  {ipaddr}",
         "format-ethernet": "󰈁 {ipaddr}",
@@ -52,6 +56,20 @@
         "tooltip": false
     },
 
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 5
+    },
+
     "memory": {
         "interval": 5,
         "format": "  {}%",
@@ -65,5 +83,9 @@
         "interval": 5,
         "format": "󱑀 {:%d.%m.%Y %A %H:%M}",
         "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "tray": {
+        "spacing": 10
     }
 }

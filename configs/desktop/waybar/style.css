@@ -10,18 +10,6 @@ window#waybar {
   color: #a9b1d6;
 }
 
-#window {
-  background-color: transparent;
-  padding: 0 10px;
-  margin: 0 2px;
-  border-radius: 8px;
-  color: #7aa2f7;
-}
-#window.empty {
-  background-color: transparent;
-  color: transparent;
-}
-
 #workspaces {
   padding: 0;
   margin: 0;
@@ -55,6 +43,7 @@ window#waybar {
 #pulseaudio,
 #memory,
 #clock,
+#battery,
 #tray {
   background-color: #1f2335;
   padding: 0 10px;
