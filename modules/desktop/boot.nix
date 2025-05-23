@@ -7,12 +7,10 @@
       efi.canTouchEfiVariables = true;
       timeout = 2;
     };
-
-    kernelModules = [ "tun" "tproxy" ];
-    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
-
     kernelPackages = pkgs.linuxPackages_zen;
-
+    kernelModules = [ "tun" "tproxy" ];
+    #blacklistedKernelModules = [ "r8169" ];
+    supportedFilesystems = [ "ntfs" "vfat" "fusefs" ];
     kernelParams = [
       "loglevel=4"
       "mitigations=off"

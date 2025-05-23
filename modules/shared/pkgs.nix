@@ -15,6 +15,7 @@
     ruff
     ruff-lsp
     nixfmt-rfc-style
+    nixfmt-classic
     prettierd
     stylua
     nodejs
@@ -74,6 +75,7 @@
     libva
     libva-utils
     libvdpau-va-gl
+    libvpx
     gnome-keyring
     gnome-session
     gnome-shell
