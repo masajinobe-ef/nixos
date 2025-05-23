@@ -12,12 +12,8 @@
     gnumake
     go
     python313
-    ruff
-    ruff-lsp
     nixfmt-rfc-style
     nixfmt-classic
-    prettierd
-    stylua
     nodejs
     pnpm
     uv
@@ -101,12 +97,10 @@
     firefox
     stylua
     shfmt
-    ruff
     ktlint
-    clang-tools
     prettierd
     codespell
-dockerfile-language-server-nodejs
+    dockerfile-language-server-nodejs
     nodePackages.bash-language-server
     vscode-langservers-extracted
     python3Packages.python-lsp-server
