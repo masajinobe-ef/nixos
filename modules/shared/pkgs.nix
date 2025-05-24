@@ -37,7 +37,6 @@
     yazi
     ueberzugpp
     libcap
-    ventoy-full
     woeusb
     ntfs3g
     wget
@@ -118,5 +117,6 @@
     marksman
     shellcheck
     stylua
+    filezilla
   ];
 }

@@ -25,7 +25,6 @@
     graphics = {
       enable = true;
     };
-    pulseaudio.enable = false;
   };
 
   services.udev.extraRules = ''

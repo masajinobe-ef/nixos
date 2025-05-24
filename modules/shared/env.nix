@@ -15,6 +15,5 @@
     UV_LINK_MODE = "copy";
     COMPOSE_BAKE = "true";
     ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
-    NIXPKGS_ALLOW_BROKEN = "1";
   };
 }

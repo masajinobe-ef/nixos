@@ -4,7 +4,7 @@
   home.username = "masa";
   home.homeDirectory = "/home/masa";
   home.enableNixpkgsReleaseCheck = false;
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
     oh-my-zsh
@@ -133,7 +133,7 @@
         ];
       };
 
-      initExtra = ''
+      initContent = ''
         # ------------------------------------------------------------------------------
         # TMUX CONFIGURATION
         # ------------------------------------------------------------------------------
