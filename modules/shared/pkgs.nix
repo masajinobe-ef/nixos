@@ -104,6 +104,7 @@
     vscode-langservers-extracted
     python3Packages.python-lsp-server
     ruff
+    pyright
     clang-tools
     nil
     taplo-cli
