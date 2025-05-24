@@ -43,7 +43,6 @@ window#waybar {
 #pulseaudio,
 #memory,
 #clock,
-#battery,
 #tray {
   background-color: #1f2335;
   padding: 0 10px;

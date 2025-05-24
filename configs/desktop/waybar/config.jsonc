@@ -9,11 +9,10 @@
     ],
     "modules-center": [
         "tray",
-        "pulseaudio",
     ],
     "modules-right": [
+        "pulseaudio",
         "memory",
-        "battery",
         "clock"
     ],
 
@@ -54,20 +53,6 @@
         "scroll-step": 1,
         "on-click": "pavucontrol",
         "tooltip": false
-    },
-
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}  {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 5
     },
 
     "memory": {
