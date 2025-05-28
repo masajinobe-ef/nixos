@@ -47,11 +47,9 @@
 
       oh-my-zsh = {
         enable = true;
-        theme = "Soliah";
+        theme = "ys";
         plugins = [
           "git"
-          "fzf"
-          "vi-mode"
         ];
       };
 
