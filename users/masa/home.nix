@@ -51,7 +51,7 @@
           "ui.key.menuAccessKeyFocuses" = false;
           "sidebar.verticalTabs" = true;
           "font.size.variable.x-western" = 16;
-          "browser.startup.homepage" = "google.jp";
+          "browser.startup.homepage" = "https://www.google.co.jp";
           "browser.urlbar.trimURLs" = false;
           "browser.uidensity" = 1;
           "browser.preferences.defaultPerformanceSettings.enabled" = true;
