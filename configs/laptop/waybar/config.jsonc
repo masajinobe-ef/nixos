@@ -1,0 +1,91 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 4,
+    "modules-left": [
+        "sway/workspaces",
+        "network"
+    ],
+    "modules-center": [
+        "tray",
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "memory",
+        "battery",
+        "clock"
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}",
+        "format-icons": {
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "network": {
+        "interface": "wlp2s0*",
+        "format": "{ifname}",
+        "format-wifi": "  {ipaddr}",
+        "format-ethernet": "󰈁 {ipaddr}",
+        "format-linked": "󰈁 (No IP)",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "Ethernet: {ifname}\nIP: {ipaddr}/{cidr}",
+        "interval": 5
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon}  {volume}%",
+        "format-muted": "  Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 5
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "clock": {
+        "interval": 5,
+        "format": "󱑀 {:%d.%m.%Y %A %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}
