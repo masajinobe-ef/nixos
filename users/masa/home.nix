@@ -17,7 +17,7 @@
   ];
 
   home.sessionVariables = {
-    #ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
+    #
   };
 
   home.sessionPath = [
