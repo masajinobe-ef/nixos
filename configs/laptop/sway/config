@@ -40,7 +40,7 @@ input type:keyboard {
 
 input type:pointer {
     accel_profile flat
-    pointer_accel -0.3
+    pointer_accel -0.1
 }
 
 input type:touchpad {
@@ -110,7 +110,7 @@ bindsym $mod+r layout toggle split
 
 # # Assign applications to Workspaces
 assign [app_id="Alacritty"] $ws1
-assign [app_id="firefox"] $ws2
+assign [app_id="librewolf"] $ws2
 assign [app_id="com.ayugram.desktop"] $ws3
 
 # # Floating and specific Rules for Windows
@@ -120,9 +120,9 @@ for_window [app_id="MEGAsync"] floating enable
 ### ======================= Autostart ======================= ###
 exec {
     alacritty
-    #firefox
-    #ayugram-desktop
+    #librewolf
     sh -c "redshift"
+    #ayugram-desktop
 }
 exec brightnessctl -q set 40%
 
@@ -139,7 +139,7 @@ exec mako
 bindsym $mod+Return exec alacritty
 
 # Browser
-bindsym $mod+w exec firefox
+bindsym $mod+w exec librewolf
 
 # Launcher
 bindsym $mod+e exec rofi -show combi -combi-modes drun

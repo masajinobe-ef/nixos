@@ -28,6 +28,39 @@
   ];
 
   programs = {
+    librewolf = {
+        enable = true;
+        settings = {
+          "webgl.disabled" = false;
+          "network.cookie.lifetimePolicy" = 0;
+          "privacy.resistFingerprinting" = false;
+          "privacy.clearOnShutdown.history" = false;
+          "privacy.clearOnShutdown.cookies" = false;
+          "privacy.donottrackheader.enabled" = true;
+          "privacy.fingerprintingProtection" = true;
+          "privacy.trackingprotection.emailtracking.enabled" = true;
+          "privacy.trackingprotection.enabled" = true;
+          "privacy.trackingprotection.fingerprinting.enabled" = true;
+          "privacy.trackingprotection.socialtracking.enabled" = true;
+          "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
+          "privacy.clearOnShutdown_v2.cache" = false;
+          "privacy.resistFingerprinting.letterboxing" = true;
+          "signon.rememberSignons" = true;
+          "signon.autofillForms" = true;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "network.dns.disableIPv6" = true;
+          "ui.key.menuAccessKeyFocuses" = false;
+          "sidebar.verticalTabs" = true;
+          "font.size.variable.x-western" = 14;
+          "browser.startup.homepage" = "google.jp";
+          "browser.urlbar.trimURLs" = false;
+          "browser.uidensity" = 1;
+          "browser.policies.runOncePerModification.removeSearchEngines" = [ "Bing" "Amazon.com" "eBay" "Twitter"];
+          "browser.policies.runOncePerModification.setDefaultSearchEngine" = "Google";
+          "browser.preferences.defaultPerformanceSettings.enabled" = true;
+          "widget.gtk.overlay-scrollbars.enabled" = false;
+        };
+    };
 
     zsh = {
       enable = true;
@@ -47,7 +80,7 @@
 
       oh-my-zsh = {
         enable = true;
-        theme = "ys";
+        theme = "amuse";
         plugins = [
           "git"
         ];
@@ -192,65 +225,6 @@
         IdentityFile ~/.ssh/id_ed25519
         IdentitiesOnly yes
       '';
-    };
-
-    firefox = {
-      enable = true;
-      profiles.default = {
-        id = 0;
-        settings = {
-
-          # General browser settings
-          "browser.startup.homepage" = "google.jp";
-          "browser.newtabpage.enabled" = false;
-          "browser.search.region" = "US";
-          "browser.search.openintab" = true;
-          "browser.tabs.loadBookmarksInTabs" = true;
-          "browser.aboutConfig.showWarning" = false;
-
-          # Privacy and security
-          "privacy.resistFingerprinting" = true;
-          "browser.safebrowsing.malware.enabled" = false;
-          "browser.safebrowsing.phishing.enabled" = false;
-          "browser.contentblocking.category" = "standard";
-
-          # Address bar suggestions
-          "browser.urlbar.suggest.quicksuggest.sponsored" = false;
-          "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
-          "browser.urlbar.suggest.trending" = false;
-
-          # Graphics acceleration
-          "gfx.webrender.all" = true;
-          "layers.acceleration.force-enabled" = true;
-
-          # DRM content
-          "media.eme.enabled" = true;
-
-          # Disable telemetry
-          "toolkit.telemetry.unified" = false;
-          "datareporting.healthreport.uploadEnabled" = false;
-
-          # Interface customization
-          "general.autoScroll" = true;
-          "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
-          "browser.uidensity" = 1;
-          "ui.key.menuAccessKeyFocuses" = false;
-          "browser.tabs.tabMinWidth" = 50;
-          "sidebar.verticalTabs" = true;
-
-          # Additional useful flags
-          "browser.download.useDownloadDir" = false;
-          "browser.tabs.warnOnClose" = false;
-          "extensions.pocket.enabled" = false;
-          "browser.urlbar.trimURLs" = false;
-          "browser.tabs.loadInBackground" = true;
-          "browser.sessionstore.interval" = 600000;
-          "full-screen-api.warning.timeout" = 0;
-          "full-screen-api.transition-duration.enter" = "0 0";
-          "full-screen-api.transition-duration.leave" = "0 0";
-
-        };
-      };
     };
 
     alacritty = {

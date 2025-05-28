@@ -20,6 +20,7 @@
     nixfmt-classic
     nodejs
     rustfmt
+    librewolf-bin
     rubocop
     ruby
     pnpm
@@ -108,7 +109,6 @@
     zip
     unzip
     pavucontrol
-    firefox
     stylua
     shfmt
     ktlint
