@@ -20,6 +20,7 @@
     nixfmt-classic
     nodejs
     rustfmt
+    spek
     librewolf-bin
     rubocop
     ruby
