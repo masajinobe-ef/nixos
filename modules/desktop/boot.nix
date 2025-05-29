@@ -8,8 +8,8 @@
       timeout = 2;
     };
     kernel.sysctl = {
-    "user.max_user_namespaces" = 10000;
-    "net.ipv4.ip_unprivileged_port_start" = 0;
+      "user.max_user_namespaces" = 10000;
+      "net.ipv4.ip_unprivileged_port_start" = 0;
     };
     kernelPackages = pkgs.linuxPackages_zen;
     kernelModules = [

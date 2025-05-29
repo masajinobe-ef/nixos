@@ -7,6 +7,7 @@
     vim
     neovim
     git
+    nil
     stow
     ghq
     gcc
