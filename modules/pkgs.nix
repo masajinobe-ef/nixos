@@ -7,6 +7,7 @@
     vim
     neovim
     git
+    onlyoffice-bin
     nil
     stow
     ghq
