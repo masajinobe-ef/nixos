@@ -10,9 +10,17 @@
     onlyoffice-bin
     nil
     stow
+    eslint_d
+    stylelint
+    hadolint
+    markdownlint-cli
+    yamllint
+    golangci-lint
     ghq
     gcc
+    megacmd
     clang
+    luajitPackages.luacheck
     gnumake
     go
     taplo

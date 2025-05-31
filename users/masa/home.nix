@@ -87,8 +87,6 @@
         # ------------------------------------------------------------------------------
         # TMUX CONFIGURATION
         # ------------------------------------------------------------------------------
-        export TERM=screen-256color
-
         if [[ -z "$TMUX" ]] && command -v tmux &> /dev/null; then
           tmux attach -t default || tmux new -s default
         fi
@@ -234,6 +232,17 @@
             y = 0;
           };
           dynamic_padding = true;
+        };
+
+        cursor = {
+          style = {
+            shape = "Beam";
+            blinking = "Off";
+          };
+        };
+
+        env = {
+          TERM = "alacritty";
         };
 
         terminal.shell.program = "/run/current-system/sw/bin/zsh";

@@ -8,9 +8,9 @@
 {
   nixpkgs.overlays = [
     (final: prev: {
-      inherit (inputs.nixpkgs-unstable.legacyPackages.${prev.system})
-        ayugram-desktop
-        ;
+
+      ayugram-desktop = inputs.nixpkgs-unstable.legacyPackages.${prev.system}.ayugram-desktop;
+
     })
   ];
 
@@ -20,4 +20,5 @@
       ayugram-desktop
     ]
   );
+
 }

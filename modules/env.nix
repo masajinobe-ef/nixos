@@ -2,16 +2,25 @@
 
 {
   environment.sessionVariables = {
+    # Wayland environment
     XDG_CURRENT_DESKTOP = "sway";
     XDG_SESSION_TYPE = "wayland";
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
     NIXOS_OZONE_WL = "1";
-    SUDO_PROMPT = "ENTER YOUR PASSWORD: ";
+
+    # Core tools
     EDITOR = "nvim";
     TERMINAL = "alacritty";
     BROWSER = "firefox";
+
+    # Terminal/color settings
+    TERM = "xterm-256color"; # 256-color support for broad compatibility
+    COLORTERM = "truecolor"; # Explicit truecolor enablement
+
+    # Miscellaneous
+    SUDO_PROMPT = "ENTER YOUR PASSWORD: ";
     UV_LINK_MODE = "copy";
     COMPOSE_BAKE = "true";
     ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
