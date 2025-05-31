@@ -9,6 +9,7 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       nerd-fonts.jetbrains-mono
+      times-newer-roman
     ];
 
     fontconfig = {
