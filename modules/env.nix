@@ -16,8 +16,8 @@
     BROWSER = "firefox";
 
     # Terminal/color settings
-    TERM = "xterm-256color"; # 256-color support for broad compatibility
-    COLORTERM = "truecolor"; # Explicit truecolor enablement
+    TERM = "xterm-256color";
+    COLORTERM = "truecolor";
 
     # Miscellaneous
     SUDO_PROMPT = "ENTER YOUR PASSWORD: ";
