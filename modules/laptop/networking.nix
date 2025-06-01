@@ -16,17 +16,20 @@
     interfaces = lib.mkForce {
 
       wlp2s0 = {
+        useDHCP = false;
+
         ipv4.addresses = [
           {
             address = "192.168.0.210";
             prefixLength = 24;
           }
         ];
+
         wakeOnLan = {
           enable = true;
           policy = [ "magic" ];
         };
-        useDHCP = false;
+
       };
 
     };

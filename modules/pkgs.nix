@@ -4,163 +4,182 @@
 }:
 
 {
-
   environment.systemPackages = with pkgs; [
-
-    home-manager
-    android-tools
-    vim
-    neovim
-    bluetuith
-    git
-    onlyoffice-bin
-    nil
-    stow
-    eslint_d
-    stylelint
-    hadolint
-    pipewire
-    wireplumber
+    # Системные утилиты
+    acpid
+    age
     alsa-utils
-    markdownlint-cli
-    yamllint
-    golangci-lint
-    ghq
-    gcc
-    megacmd
+    android-tools
+    btop
+    fastfetch
+    home-manager
+    iproute2
+    libcap
+    lsof
+    lynis
+    ntfs3g
+    sops
+    woeusb
+
+    # Разработка и инструменты сборки
+    arduino-cli
+    arduino-core
+    avrdude
     clang
-    luajitPackages.luacheck
-    gnumake
-    helvum
-    qjackctl
-    pavucontrol
-    go
-    taplo
-    python313
-    nixfmt-rfc-style
-    lua-language-server
-    nixfmt-classic
-    nodejs
-    rustfmt
-    spek
-    librewolf-bin
-    rubocop
-    ruby
-    pnpm
-    uv
+    cmake
     docker
     docker-buildx
     fuse-overlayfs
-    slirp4netns
+    gcc
+    go
     jq
-    yq
-    cmake
-    llvm
-    lld
     libiconv
-    alacritty
-    zsh
-    lua
-    luajit
+    lld
+    llvm
     luarocks
-    luau
+    pnpm
+    ruby
+    rustfmt
+    slirp4netns
     tree-sitter
-    tmux
-    tmuxp
-    eza
-    fzf
-    fd
-    ripgrep
-    zoxide
-    tree
-    yazi
-    ueberzugpp
-    libcap
-    woeusb
-    ntfs3g
-    wget
-    qbittorrent
-    dnsmasq
-    dnscrypt-proxy
-    dnsutils
-    gvisor
-    iptables
-    nftables
-    acpid
-    iproute2
-    fastfetch
-    btop
-    sops
-    age
-    lynis
-    xfce.ristretto
-    xfce.tumbler
-    krita
-    obs-studio
-    inkscape
+    uv
+    yq
+
+    # Редакторы и IDE
+    alacritty
+    neovim
+    vim
+
+    # Аудио/Видео
     ffmpeg
-    yt-dlp
+    helvum
     mpv
+    obs-studio
+    pavucontrol
+    pipewire
+    qjackctl
+    spek
     vlc
-    imagemagick
+    wireplumber
+    yt-dlp
+
+    # Графика и изображения
     exiftool
-    mesa
-    libvdpau
+    imagemagick
+    inkscape
+    krita
     libva
     libva-utils
+    libvdpau
     libvdpau-va-gl
     libvpx
-    gnome-keyring
-    gnome-session
-    gnome-shell
-    gnome-control-center
-    xdg-utils
-    redshift
-    papirus-icon-theme
-    wl-clipboard
-    grim
-    slurp
-    swaylock
-    swayidle
-    waybar
-    rofi-wayland
-    mako
-    swaybg
-    p7zip
-    unrar
-    zip
-    unzip
-    pavucontrol
-    stylua
-    shfmt
-    ktlint
-    prettierd
+    mesa
+    xfce.ristretto
+    xfce.tumbler
+
+    # Сетевые инструменты
+    bluetuith
+    dnsmasq
+    dnsutils
+    dnscrypt-proxy
+    filezilla
+    gvisor
+    iptables
+    nekoray
+    nftables
+    qbittorrent
+    wget
+
+    # Управление пакетами и версиями
+    ghq
+    git
+
+    # Терминальные утилиты
+    eza
+    fd
+    fzf
+    ripgrep
+    tmux
+    tmuxp
+    tree
+    ueberzugpp
+    yazi
+    zoxide
+
+    # Оболочки
+    zsh
+
+    # Языки программирования
+    lua
+    luajit
+    luau
+    nodejs
+    python313
+
+    # Линтеры и форматеры
     codespell
-    dockerfile-language-server-nodejs
-    nodePackages.bash-language-server
-    vscode-langservers-extracted
-    python3Packages.python-lsp-server
-    ruff
-    pyright
-    clang-tools
+    eslint_d
+    golangci-lint
+    hadolint
+    ktlint
+    luajitPackages.luacheck
+    markdownlint-cli
+    nixfmt-classic
+    nixfmt-rfc-style
     nil
+    prettierd
+    rubocop
+    shellcheck
+    shfmt
+    stylelint
+    stylua
+    yamllint
+
+    # LSP-серверы
+    clang-tools
+    dockerfile-language-server-nodejs
     gopls
     kotlin-language-server
+    lua-language-server
+    marksman
+    nodePackages.bash-language-server
+    pyright
+    python3Packages.python-lsp-server
+    ruff
     rust-analyzer
     sqls
     tailwindcss-language-server
     typescript-language-server
+    vscode-langservers-extracted
     yaml-language-server
-    marksman
-    shellcheck
-    stylua
-    filezilla
-    nekoray
-    arduino-core
-    avrdude
-    arduino-cli
-    lsof
 
+    # Рабочий стол и GUI
+    gnome-control-center
+    gnome-keyring
+    gnome-session
+    gnome-shell
+    grim
+    mako
+    onlyoffice-bin
+    papirus-icon-theme
+    redshift
+    rofi-wayland
+    slurp
+    swaybg
+    swayidle
+    swaylock
+    waybar
+    wl-clipboard
+    xdg-utils
+
+    # Системное ПО
+    librewolf-bin
+    megacmd
+    p7zip
+    stow
+    taplo
+    unrar
+    unzip
+    zip
   ];
-
 }

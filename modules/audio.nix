@@ -7,45 +7,6 @@
 
 {
 
-  security = {
-
-    rtkit.enable = true;
-
-    pam.loginLimits = [
-      {
-        domain = "@realtime";
-        type = "-";
-        item = "rtprio";
-        value = "99";
-      }
-      {
-        domain = "@realtime";
-        type = "-";
-        item = "memlock";
-        value = "unlimited";
-      }
-      {
-        domain = "*";
-        type = "soft";
-        item = "nofile";
-        value = "65536";
-      }
-      {
-        domain = "*";
-        type = "hard";
-        item = "nofile";
-        value = "65536";
-      }
-    ];
-  };
-
-  systemd.extraConfig = ''
-    DefaultLimitNOFILE=65536
-  '';
-  systemd.user.extraConfig = ''
-    DefaultLimitNOFILE=65536
-  '';
-
   services = {
 
     pulseaudio.enable = false;
