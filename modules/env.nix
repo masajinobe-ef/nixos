@@ -8,6 +8,7 @@
     QT_QPA_PLATFORM = "wayland";
     SDL_VIDEODRIVER = "wayland";
     CLUTTER_BACKEND = "wayland";
+    GDK_BACKEND = "wayland";
     NIXOS_OZONE_WL = "1";
 
     # Core tools

@@ -25,10 +25,7 @@
     }@inputs:
     let
       system = "x86_64-linux";
-
-      # Base modules shared across all systems
       baseModules = [
-
         (
           { modulesPath, ... }:
           {
@@ -44,15 +41,21 @@
           }
         )
 
-        ./modules/core.nix
-        ./modules/services.nix
-        ./modules/pkgs.nix
-        ./modules/overlays.nix
+        ./modules/audio.nix
+        ./modules/docker.nix
         ./modules/env.nix
         ./modules/fonts.nix
+        ./modules/hardware.nix
+        ./modules/nix.nix
+        ./modules/other.nix
+        ./modules/overlays.nix
+        ./modules/pkgs.nix
+        ./modules/security.nix
+        ./modules/services.nix
+        ./modules/timezone.nix
+        ./modules/user.nix
       ];
 
-      # Host-specific module paths
       hostModules = host: [
         ./modules/${host}/boot.nix
         ./modules/${host}/networking.nix
@@ -61,7 +64,6 @@
         ./modules/${host}/services.nix
       ];
 
-      # Common Home Manager configuration
       homeManagerModule = {
         home-manager = {
           useGlobalPkgs = true;
@@ -72,7 +74,6 @@
         };
       };
 
-      # System builder function
       mkSystem =
         hostName:
         nixpkgs.lib.nixosSystem {

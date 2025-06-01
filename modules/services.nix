@@ -2,6 +2,12 @@
 
 {
   services = {
+    dbus.enable = true;
+    gvfs.enable = true;
+    gnome.gnome-keyring.enable = true;
+    seatd.enable = true;
+    libinput.enable = true;
+    fstrim.enable = true;
     openssh = {
       enable = true;
       ports = [ 33677 ];
@@ -32,14 +38,12 @@
         Subsystem = "sftp internal-sftp";
       };
     };
-
     resolved = {
       enable = false;
       dnssec = "allow-downgrade";
       fallbackDns = [ "8.8.8.8" ];
       domains = [ "~." ];
     };
-
     xserver = {
       enable = true;
       displayManager = {
@@ -50,22 +54,5 @@
         defaultSession = "sway";
       };
     };
-
-    pulseaudio.enable = false;
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      #jack.enable = true;
-    };
-
-    dbus.enable = true;
-    gvfs.enable = true;
-    gnome.gnome-keyring.enable = true;
-    seatd.enable = true;
-    libinput.enable = true;
-
-    fstrim.enable = true;
   };
 }

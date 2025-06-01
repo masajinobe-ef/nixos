@@ -6,6 +6,7 @@
     android-tools
     vim
     neovim
+    bluetuith
     git
     onlyoffice-bin
     nil
@@ -13,6 +14,9 @@
     eslint_d
     stylelint
     hadolint
+    pipewire
+    wireplumber
+    alsa-utils
     markdownlint-cli
     yamllint
     golangci-lint
@@ -22,6 +26,9 @@
     clang
     luajitPackages.luacheck
     gnumake
+    helvum
+    qjackctl
+    pavucontrol
     go
     taplo
     python313
@@ -105,7 +112,6 @@
     xdg-utils
     redshift
     papirus-icon-theme
-    qt5.qtwayland
     wl-clipboard
     grim
     slurp

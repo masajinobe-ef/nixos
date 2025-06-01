@@ -10,6 +10,9 @@
     kernel.sysctl = {
       "user.max_user_namespaces" = 10000;
       "net.ipv4.ip_unprivileged_port_start" = 0;
+      "vm.swappiness" = 10;
+      "vm.overcommit_memory" = 1;
+      "fs.file-max" = 2097152;
     };
     kernelPackages = pkgs.linuxPackages_zen;
     kernelModules = [
