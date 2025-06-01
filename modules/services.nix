@@ -22,7 +22,7 @@
           "aes256-gcm@openssh.com"
         ];
         Macs = [ "hmac-sha2-512-etm@openssh.com" ];
-        PermitRootLogin = "prohibit-password";
+        PermitRootLogin = "no";
         PubkeyAuthentication = true;
         AuthenticationMethods = "publickey";
         PasswordAuthentication = false;
@@ -33,10 +33,16 @@
         ClientAliveInterval = 600;
         ClientAliveCountMax = 2;
         AllowTcpForwarding = false;
+        AllowAgentForwarding = false;
         X11Forwarding = false;
         PermitTunnel = false;
         Subsystem = "sftp internal-sftp";
       };
+    };
+    fail2ban = {
+      enable = true;
+      maxretry = 6;
+      bantime = "1h";
     };
     resolved = {
       enable = false;

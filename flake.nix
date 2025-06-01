@@ -42,7 +42,7 @@
         )
 
         ./modules/audio.nix
-        ./modules/docker.nix
+        ./modules/virtualisation.nix
         ./modules/env.nix
         ./modules/fonts.nix
         ./modules/hardware.nix
