@@ -10,6 +10,7 @@
   security = {
 
     rtkit.enable = true;
+
     pam.loginLimits = [
       {
         domain = "@realtime";
