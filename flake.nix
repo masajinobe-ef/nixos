@@ -2,13 +2,10 @@
   description = "Masa's NixOS Configuration";
 
   inputs = {
-    # Stable NixOS
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
 
-    # Unstable channel for latest packages
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    # Home manager for user configurations
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,7 +21,9 @@
       ...
     }@inputs:
     let
+
       system = "x86_64-linux";
+
       baseModules = [
         (
           { modulesPath, ... }:
@@ -42,10 +41,12 @@
         )
 
         ./modules/audio.nix
+        ./modules/boot.nix
         ./modules/virtualisation.nix
         ./modules/env.nix
         ./modules/fonts.nix
         ./modules/hardware.nix
+        ./modules/networking.nix
         ./modules/nix.nix
         ./modules/other.nix
         ./modules/overlays.nix
@@ -65,13 +66,16 @@
       ];
 
       homeManagerModule = {
+
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
           backupFileExtension = "backup";
           extraSpecialArgs = { inherit inputs nixpkgs-unstable; };
           users.masa = ./users/masa/home.nix;
+
         };
+
       };
 
       mkSystem =

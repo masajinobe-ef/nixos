@@ -1,7 +1,12 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
+
   environment.systemPackages = with pkgs; [
+
     home-manager
     android-tools
     vim
@@ -155,5 +160,7 @@
     avrdude
     arduino-cli
     lsof
+
   ];
+
 }

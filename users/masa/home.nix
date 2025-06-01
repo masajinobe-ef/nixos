@@ -5,31 +5,38 @@
 }:
 
 {
+
   home.username = "masa";
   home.homeDirectory = "/home/masa";
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
+
     oh-my-zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
+
+  ];
+
+  home.sessionPath = [
+
+    "$HOME/.personal/sh"
+    "$HOME/.local/bin"
+    "$HOME/.local/scripts"
+    "$HOME/.local/share"
+
   ];
 
   home.sessionVariables = {
     #
   };
 
-  home.sessionPath = [
-    "$HOME/.personal/sh"
-    "$HOME/.local/bin"
-    "$HOME/.local/scripts"
-    "$HOME/.local/share"
-  ];
-
   programs = {
+
     librewolf = {
       enable = true;
+
       settings = {
         "webgl.disabled" = false;
         "network.cookie.lifetimePolicy" = 0;
@@ -57,10 +64,12 @@
         "browser.preferences.defaultPerformanceSettings.enabled" = true;
         "widget.gtk.overlay-scrollbars.enabled" = false;
       };
+
     };
 
     zsh = {
       enable = true;
+
       autosuggestion.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
@@ -153,47 +162,35 @@
         zz = "zip -r";
         uz = "unzip";
       };
+
     };
 
     git = {
       enable = true;
+
       userName = "masajinobe-ef";
       userEmail = "priscilla.effects@gmail.com";
+
       extraConfig = {
-        # Initialization settings
+
         init.defaultBranch = "main";
 
-        # Pull settings
         pull.rebase = true;
 
-        # Credential helper
         credential.helper = "store";
 
-        # Core settings
         core.autocrlf = "input";
         core.editor = "nvim";
         core.ignorecase = false;
         core.excludesfile = "~/.gitignore";
 
-        # Format settings
         format.pretty = "oneline";
 
-        # HTTP settings
         http.postBuffer = 157286400;
         http.version = "HTTP/2";
 
-        # Color settings
-        color.ui = "auto";
-        color.status = "auto";
-        color.diff = "auto";
-        color.branch = "auto";
-        color.interactive = "auto";
-        color.grep = "auto";
-
-        # Push settings
         push.default = "simple";
 
-        # Aliases
         alias.a = "add .";
         alias.c = "commit -a";
         alias.ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)";
@@ -210,21 +207,28 @@
         alias.l = ''log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative'';
         alias.editmerge = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`";
         alias.addmerge = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`";
+
       };
+
     };
 
     ssh = {
       enable = true;
+
       extraConfig = ''
         User masa
         IdentityFile ~/.ssh/id_ed25519
         IdentitiesOnly yes
       '';
+
     };
 
     alacritty = {
       enable = true;
+
       settings = {
+        debug.log_level = "Warn";
+
         window = {
           opacity = 0.98;
           padding = {
@@ -249,35 +253,41 @@
 
         font = {
           size = 14;
+
           normal = {
             family = "JetbrainsMono Nerd Font";
             style = "Regular";
           };
+
           bold = {
             family = "JetbrainsMono Nerd Font";
             style = "Bold";
           };
+
           italic = {
             family = "JetbrainsMono Nerd Font";
             style = "italic";
           };
+
           bold_italic = {
             family = "JetbrainsMono Nerd Font";
             style = "Bold Italic";
           };
+
         };
 
-        debug.log_level = "Warn";
-
         colors = {
+
           primary = {
             background = "#000000";
             foreground = "#ffffff";
           };
+
           cursor = {
             text = "#F81CE5";
             cursor = "#ffffff";
           };
+
           normal = {
             black = "#000000";
             red = "#fe0100";
@@ -288,6 +298,7 @@
             cyan = "#00ffff";
             white = "#d0d0d0";
           };
+
           bright = {
             black = "#808080";
             red = "#fe0100";
@@ -298,9 +309,13 @@
             cyan = "#00ffff";
             white = "#FFFFFF";
           };
+
         };
+
       };
+
     };
 
   };
+
 }

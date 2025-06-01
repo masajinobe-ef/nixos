@@ -1,7 +1,11 @@
-{ ... }:
+{
+  ...
+}:
 
 {
+
   environment.sessionVariables = {
+
     # Wayland environment
     XDG_CURRENT_DESKTOP = "sway";
     XDG_SESSION_TYPE = "wayland";
@@ -26,5 +30,7 @@
     COMPOSE_BAKE = "true";
     ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
     NIX_BUILD_CORES = 0;
+
   };
+
 }

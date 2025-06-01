@@ -1,6 +1,9 @@
-{ ... }:
+{
+  ...
+}:
 
 {
+
   system.stateVersion = "25.05";
 
   nixpkgs.config = {
@@ -8,6 +11,7 @@
   };
 
   nix = {
+
     gc = {
       automatic = true;
       dates = "weekly";
@@ -21,6 +25,9 @@
         "nix-command"
         "flakes"
       ];
+
     };
+
   };
+
 }

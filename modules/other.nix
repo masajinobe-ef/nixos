@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
 
 {
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -11,4 +15,5 @@
     enable = true;
     wrapperFeatures.gtk = true;
   };
+
 }

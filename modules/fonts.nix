@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
+
   fonts = {
+
     enableDefaultPackages = true;
 
     packages = with pkgs; [
@@ -14,11 +16,15 @@
 
     fontconfig = {
       enable = true;
+
       defaultFonts = {
         monospace = [ "JetBrainsMono Nerd Font" ];
         sansSerif = [ "Noto Sans" ];
         serif = [ "Noto Serif" ];
       };
+
     };
+
   };
+
 }

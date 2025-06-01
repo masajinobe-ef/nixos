@@ -1,7 +1,11 @@
-{ ... }:
+{
+  ...
+}:
 
 {
+
   security = {
+
     pam.sshAgentAuth.enable = true;
     pam.services = {
       gdm.enableGnomeKeyring = true;
@@ -13,7 +17,9 @@
     virtualisation.flushL1DataCache = "always";
     protectKernelImage = true;
 
-    auditd.enable = true;
-    audit.enable = true;
+    auditd.enable = false;
+    audit.enable = false;
+
   };
+
 }
