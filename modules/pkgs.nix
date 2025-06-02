@@ -174,6 +174,7 @@
 
     # Системное ПО
     librewolf-bin
+    httrack
     megacmd
     p7zip
     stow
