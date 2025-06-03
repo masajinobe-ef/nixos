@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -17,9 +14,8 @@
     libcap
     lsof
     lynis
-    ntfs3g
     sops
-    woeusb
+    libnotify
 
     # Разработка и инструменты сборки
     arduino-cli

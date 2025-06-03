@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, lib, ... }:
 
 {
 
@@ -87,9 +83,7 @@
       oh-my-zsh = {
         enable = true;
         theme = "amuse";
-        plugins = [
-          "git"
-        ];
+        plugins = [ "git" ];
       };
 
       initContent = ''
@@ -157,7 +151,8 @@
         rm = "rm -rfv";
         cp = "cp -rv";
         mkdir = "mkdir -pv";
-        s = "clear; ${pkgs.eza}/bin/eza --long --header --icons=always --all --level=1 --group-directories-first --no-time";
+        s =
+          "clear; ${pkgs.eza}/bin/eza --long --header --icons=always --all --level=1 --group-directories-first --no-time";
         untar = "tar -xvvf";
         zz = "zip -r";
         uz = "unzip";
@@ -202,11 +197,16 @@
         alias.bm = "branch --merged";
         alias.bn = "branch --no-merged";
         alias.d = "diff";
-        alias.df = ''!git log --pretty=format:"%h %cd [%cn] %s%d" --date=relative | fzf | awk '{print $1}' | xargs -I {} git diff {}^ {}'';
-        alias.h = ''log --pretty=format:"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)" --graph --date=relative --decorate --all'';
-        alias.l = ''log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative'';
-        alias.editmerge = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`";
-        alias.addmerge = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`";
+        alias.df = ''
+          !git log --pretty=format:"%h %cd [%cn] %s%d" --date=relative | fzf | awk '{print $1}' | xargs -I {} git diff {}^ {}'';
+        alias.h = ''
+          log --pretty=format:"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)" --graph --date=relative --decorate --all'';
+        alias.l = ''
+          log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative'';
+        alias.editmerge =
+          "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; nvim `f`";
+        alias.addmerge =
+          "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`";
 
       };
 
@@ -245,9 +245,7 @@
           };
         };
 
-        env = {
-          TERM = "alacritty";
-        };
+        env = { TERM = "alacritty"; };
 
         terminal.shell.program = "/run/current-system/sw/bin/zsh";
 

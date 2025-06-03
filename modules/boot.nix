@@ -17,7 +17,6 @@
       "user.max_user_namespaces" = 10000;
       "vm.swappiness" = 10;
       "vm.overcommit_memory" = 1;
-      "fs.file-max" = 2097152;
     };
 
     kernelModules = [

@@ -21,7 +21,7 @@
     ];
 
     firewall = {
-      enable = true;
+      enable = false;
       checkReversePath = "loose";
       allowPing = false;
       logRefusedConnections = true;
