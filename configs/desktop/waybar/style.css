@@ -40,7 +40,7 @@ window#waybar {
 }
 
 #network,
-#pulseaudio,
+#custom-volume,
 #memory,
 #clock,
 #tray {
@@ -58,6 +58,14 @@ window#waybar {
 #clock {
   color: #b4f9f8;
 }
-#pulseaudio {
+
+#custom-volume {
   color: #e0af68;
+  padding: 0 8px;
+}
+#custom-volume.muted {
+  color: #bf616a;
+}
+#custom-volume.error {
+  color: #d08770;
 }

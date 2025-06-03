@@ -11,10 +11,20 @@
         "tray",
     ],
     "modules-right": [
-        "pulseaudio",
+        "custom/volume",
         "memory",
         "clock"
     ],
+
+    "custom/volume": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/volume.sh",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    },
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -35,24 +45,6 @@
         "format-disconnected": "󰖪",
         "tooltip-format": "Ethernet: {ifname}\nIP: {ipaddr}/{cidr}",
         "interval": 5
-    },
-
-    "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon}  {volume}%",
-        "format-muted": "  Muted",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "scroll-step": 1,
-        "on-click": "pavucontrol",
-        "tooltip": false
     },
 
     "memory": {
