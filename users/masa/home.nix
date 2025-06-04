@@ -245,8 +245,6 @@
           };
         };
 
-        env = { TERM = "alacritty"; };
-
         terminal.shell.program = "/run/current-system/sw/bin/zsh";
 
         font = {
