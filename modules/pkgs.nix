@@ -17,30 +17,6 @@
     sops
     libnotify
 
-    # Разработка и инструменты сборки
-    arduino-cli
-    arduino-core
-    avrdude
-    clang
-    cmake
-    docker
-    docker-buildx
-    fuse-overlayfs
-    gcc
-    go
-    jq
-    libiconv
-    lld
-    llvm
-    luarocks
-    pnpm
-    ruby
-    rustfmt
-    slirp4netns
-    tree-sitter
-    uv
-    yq
-
     # Редакторы и IDE
     alacritty
     neovim
@@ -72,6 +48,7 @@
     mesa
     xfce.ristretto
     xfce.tumbler
+    gallery-dl
 
     # Сетевые инструменты
     bluetuith
@@ -105,35 +82,53 @@
     # Оболочки
     zsh
 
-    # Языки программирования
+    # Разработка
+    pylyzer
     lua
     luajit
     luau
     nodejs
     python313
-
-    # Линтеры и форматеры
+    arduino-cli
+    arduino-core
+    avrdude
+    clang
+    cmake
+    docker
+    docker-buildx
+    fuse-overlayfs
+    gcc
+    go
+    jq
+    libiconv
+    lld
+    llvm
+    luarocks
+    pnpm
+    ruby
+    rustfmt
+    slirp4netns
+    tree-sitter
+    uv
+    yq
     codespell
-    eslint_d
-    golangci-lint
-    hadolint
-    ktlint
     luajitPackages.luacheck
     markdownlint-cli
     nixfmt-classic
     nixfmt-rfc-style
+    nixpkgs-lint-community
     nil
     prettierd
-    rubocop
+    hadolint
+    rslint
     shellcheck
     shfmt
     stylelint
     stylua
     yamllint
-
-    # LSP-серверы
     clang-tools
     dockerfile-language-server-nodejs
+    docker-language-server
     gopls
     kotlin-language-server
     lua-language-server
