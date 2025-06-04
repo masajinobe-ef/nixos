@@ -130,8 +130,20 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DIS
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY SWAYSOCK
 exec systemctl --user start xdg-desktop-portal
 
-exec waybar -c ~/.config/waybar/config.jsonc
-exec mako
+#exec waybar -c ~/.config/waybar/config.jsonc
+# exec mako \
+#     --default-timeout 5000 \
+#     --ignore-timeout \
+#     --mode replace \
+#     --anchor top-right \
+#     --text-color "#ffffff" \
+#     --background-color "#1e1e2e" \
+#     --border-color "#89b4fa" \
+#     --border-size 1 \
+#     --font "JetBrains Mono Nerd Font 10" \
+#     --layer overlay \
+#     --invisible-on-fullscreen ignore \
+#     --max-visible 1 \
 
 ### ======================= Applications ======================= ###
 
