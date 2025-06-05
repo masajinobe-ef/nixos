@@ -83,6 +83,8 @@
     zsh
 
     # Разработка
+    meson
+    ninja
     gnumake
     pylyzer
     lua
