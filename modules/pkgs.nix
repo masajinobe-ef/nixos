@@ -143,6 +143,7 @@
     typescript-language-server
     vscode-langservers-extracted
     yaml-language-server
+    llvm
 
     # Рабочий стол и GUI
     gnome-control-center
