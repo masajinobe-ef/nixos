@@ -83,6 +83,7 @@
     zsh
 
     # Разработка
+    gnumake
     pylyzer
     lua
     luajit
