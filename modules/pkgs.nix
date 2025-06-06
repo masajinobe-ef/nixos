@@ -14,7 +14,6 @@
     libcap
     lsof
     lynis
-    sops
     libnotify
 
     # Editor
@@ -60,7 +59,6 @@
     gvisor
     iptables
     nekoray
-    nftables
     qbittorrent
     wget
 
@@ -84,40 +82,34 @@
     zsh
 
     # Dev
-    lldb
-    lld
+    clang
+    clang-tools
     mold
-    gdb
-    valgrind
-    hyperfine
+    lld
+    lldb
+    llvm
+    llvmPackages_17.compiler-rt
+    libcxxrt
+    llvmPackages_17.libcxx
+    libunwind
+    include-what-you-use
+    clang-analyzer
     cppcheck
-    bear
-    pkg-config
+
+    hyperfine
     eslint_d
     yamlfmt
-    meson
-    ninja
-    gnumake
-    pylyzer
     lua
     luajit
     luau
     nodejs
     python313
-    arduino-cli
-    arduino-core
-    avrdude
-    clang
-    cmake
     docker
     docker-buildx
     fuse-overlayfs
-    gcc
     go
     jq
     libiconv
-    lld
-    llvm
     luarocks
     pnpm
     ruby
@@ -128,20 +120,17 @@
     yq
     codespell
     luajitPackages.luacheck
-    markdownlint-cli
     nixfmt-classic
     nixfmt-rfc-style
     nixpkgs-lint-community
     nil
     prettierd
     hadolint
-    rslint
     shellcheck
     shfmt
     stylelint
     stylua
     yamllint
-    clang-tools
     dockerfile-language-server-nodejs
     docker-language-server
     gopls
@@ -150,7 +139,6 @@
     marksman
     nodePackages.bash-language-server
     pyright
-    python3Packages.python-lsp-server
     ruff
     rust-analyzer
     sqls
@@ -158,7 +146,6 @@
     typescript-language-server
     vscode-langservers-extracted
     yaml-language-server
-    llvm
 
     # Desktop
     gnome-control-center
