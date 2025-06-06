@@ -23,6 +23,7 @@
     vim
 
     # Audio/Video
+    audacious
     ffmpeg
     helvum
     mpv
@@ -83,6 +84,15 @@
     zsh
 
     # Dev
+    lldb
+    lld
+    mold
+    gdb
+    valgrind
+    hyperfine
+    cppcheck
+    bear
+    pkg-config
     eslint_d
     yamlfmt
     meson

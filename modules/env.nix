@@ -20,6 +20,11 @@
     TERMINAL = "alacritty";
     BROWSER = "firefox";
 
+    # CC/CXX Compiler
+    CC = "clang";
+    CXX = "clang++";
+    LD = "mold";
+
     # Terminal/color settings
     TERM = "xterm-256color";
     COLORTERM = "truecolor";
