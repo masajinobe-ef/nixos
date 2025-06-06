@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Системные утилиты
+    # System utils
     acpid
     age
     alsa-utils
@@ -17,12 +17,12 @@
     sops
     libnotify
 
-    # Редакторы и IDE
+    # Editor
     alacritty
     neovim
     vim
 
-    # Аудио/Видео
+    # Audio/Video
     ffmpeg
     helvum
     mpv
@@ -35,7 +35,7 @@
     wireplumber
     yt-dlp
 
-    # Графика и изображения
+    # Graphic
     exiftool
     imagemagick
     inkscape
@@ -50,7 +50,7 @@
     xfce.tumbler
     gallery-dl
 
-    # Сетевые инструменты
+    # Net
     bluetuith
     dnsmasq
     dnsutils
@@ -63,11 +63,11 @@
     qbittorrent
     wget
 
-    # Управление пакетами и версиями
+    # Pkgs
     ghq
     git
 
-    # Терминальные утилиты
+    # Terminal
     eza
     fd
     fzf
@@ -79,10 +79,12 @@
     yazi
     zoxide
 
-    # Оболочки
+    # Shell
     zsh
 
-    # Разработка
+    # Dev
+    eslint_d
+    yamlfmt
     meson
     ninja
     gnumake
@@ -148,7 +150,7 @@
     yaml-language-server
     llvm
 
-    # Рабочий стол и GUI
+    # Desktop
     gnome-control-center
     gnome-keyring
     gnome-session
@@ -167,7 +169,7 @@
     wl-clipboard
     xdg-utils
 
-    # Системное ПО
+    # System software
     librewolf-bin
     httrack
     megacmd
