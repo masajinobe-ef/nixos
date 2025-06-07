@@ -82,12 +82,19 @@
     zsh
 
     # Dev
+    rustup
+    gnumake
+    gcc
+    cmake
     clang
     clang-tools
     mold
+    meson
+    ninja
     lld
     lldb
     llvm
+    llvmPackages_17.libllvm
     llvmPackages_17.compiler-rt
     libcxxrt
     llvmPackages_17.libcxx

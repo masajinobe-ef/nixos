@@ -21,9 +21,8 @@
     BROWSER = "firefox";
 
     # CC/CXX Compiler
-    CC = "clang";
-    CXX = "clang++";
-    LD = "mold";
+    #CC = "clang";
+    #CXX = "clang++";
 
     # Terminal/color settings
     TERM = "xterm-256color";
