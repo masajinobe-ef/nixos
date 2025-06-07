@@ -117,6 +117,7 @@
     ruff
     rust-analyzer
     marksman
+    bash-language-server
     dockerfile-language-server-nodejs
     docker-language-server
     lua-language-server
