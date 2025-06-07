@@ -2,71 +2,42 @@
 
 {
   environment.systemPackages = with pkgs; [
+
     # System utils
     acpid
-    age
-    alsa-utils
-    android-tools
     btop
     fastfetch
     home-manager
-    iproute2
-    libcap
-    lsof
-    lynis
     libnotify
-
-    # Editor
+    librewolf-bin
+    httrack
+    megacmd
+    p7zip
+    stow
+    unrar
+    unzip
+    zip
     alacritty
     neovim
     vim
-
-    # Audio/Video
-    audacious
-    ffmpeg
-    helvum
-    mpv
-    obs-studio
-    pavucontrol
-    pipewire
-    qjackctl
-    spek
-    vlc
-    wireplumber
-    yt-dlp
-
-    # Graphic
     exiftool
     imagemagick
     inkscape
     krita
-    libva
-    libva-utils
-    libvdpau
-    libvdpau-va-gl
-    libvpx
-    mesa
     xfce.ristretto
     xfce.tumbler
-    gallery-dl
-
-    # Net
-    bluetuith
-    dnsmasq
-    dnsutils
-    dnscrypt-proxy
-    filezilla
-    gvisor
-    iptables
-    nekoray
-    qbittorrent
-    wget
-
-    # Pkgs
+    audacious
+    ffmpeg
+    mpv
+    obs-studio
+    spek
+    vlc
+    yt-dlp
     ghq
     git
-
-    # Terminal
+    qbittorrent
+    wget
+    bluetuith
     eza
     fd
     fzf
@@ -77,82 +48,8 @@
     ueberzugpp
     yazi
     zoxide
-
-    # Shell
     zsh
-
-    # Dev
-    rustup
-    gnumake
-    gcc
-    cmake
-    clang
-    clang-tools
-    mold
-    meson
-    ninja
-    lld
-    lldb
-    llvm
-    llvmPackages_17.libllvm
-    llvmPackages_17.compiler-rt
-    libcxxrt
-    llvmPackages_17.libcxx
-    libunwind
-    include-what-you-use
-    clang-analyzer
-    cppcheck
-
-    hyperfine
-    eslint_d
-    yamlfmt
-    lua
-    luajit
-    luau
-    nodejs
-    python313
-    docker
-    docker-buildx
-    fuse-overlayfs
-    go
-    jq
-    libiconv
-    luarocks
-    pnpm
-    ruby
-    rustfmt
-    slirp4netns
-    tree-sitter
-    uv
-    yq
-    codespell
-    luajitPackages.luacheck
-    nixfmt-classic
-    nixfmt-rfc-style
-    nixpkgs-lint-community
-    nil
-    prettierd
-    hadolint
-    shellcheck
-    shfmt
-    stylelint
-    stylua
-    yamllint
-    dockerfile-language-server-nodejs
-    docker-language-server
-    gopls
-    kotlin-language-server
-    lua-language-server
-    marksman
-    nodePackages.bash-language-server
-    pyright
-    ruff
-    rust-analyzer
-    sqls
-    tailwindcss-language-server
-    typescript-language-server
-    vscode-langservers-extracted
-    yaml-language-server
+    onlyoffice-bin
 
     # Desktop
     gnome-control-center
@@ -161,7 +58,6 @@
     gnome-shell
     grim
     mako
-    onlyoffice-bin
     papirus-icon-theme
     redshift
     rofi-wayland
@@ -173,15 +69,60 @@
     wl-clipboard
     xdg-utils
 
-    # System software
-    librewolf-bin
-    httrack
-    megacmd
-    p7zip
-    stow
+    # Audio/Video
+    pavucontrol
+    pipewire
+    wireplumber
+
+    # Graphic
+    libva
+    libva-utils
+    libvdpau
+    libvdpau-va-gl
+    libvpx
+    mesa
+
+    # Dev
+    clang
+    clang-tools
+    hyperfine
+    eslint_d
+    yamlfmt
+    luajit
+    nodejs
+    python313
+    docker
+    docker-buildx
+    go
+    jq
+    luarocks
+    pnpm
+    ruby
+    rustfmt
+    tree-sitter
+    uv
+    yq
+    codespell
+    luajitPackages.luacheck
+    nil
+    prettierd
+    hadolint
+    shellcheck
+    shfmt
+    stylua
+    yamllint
     taplo
-    unrar
-    unzip
-    zip
+
+    # LSP
+    ruff
+    rust-analyzer
+    marksman
+    dockerfile-language-server-nodejs
+    docker-language-server
+    lua-language-server
+    tailwindcss-language-server
+    typescript-language-server
+    yaml-language-server
+
   ];
 }
