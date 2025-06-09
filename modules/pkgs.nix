@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
 
-    # System utils
+    # Software
     acpid
     btop
     fastfetch
