@@ -130,7 +130,7 @@ exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DIS
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DISPLAY SWAYSOCK
 exec systemctl --user start xdg-desktop-portal
 
-#exec waybar -c ~/.config/waybar/config.jsonc
+exec waybar -c ~/.config/waybar/config.jsonc
 # exec mako \
 #     --default-timeout 5000 \
 #     --ignore-timeout \
