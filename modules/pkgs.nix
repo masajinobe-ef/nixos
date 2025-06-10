@@ -83,6 +83,7 @@
     mesa
 
     # Dev
+    gnumake
     clang
     clang-tools
     hyperfine
