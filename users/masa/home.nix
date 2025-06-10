@@ -25,51 +25,56 @@
   ];
 
   home.sessionVariables = {
+
     #
+
   };
 
   programs = {
 
-    librewolf = {
+    firefox = {
       enable = true;
-
-      settings = {
-        "webgl.disabled" = false;
-        "network.cookie.lifetimePolicy" = 0;
-        "privacy.resistFingerprinting" = false;
-        "privacy.clearOnShutdown.history" = false;
-        "privacy.clearOnShutdown.cookies" = false;
-        "privacy.donottrackheader.enabled" = true;
-        "privacy.fingerprintingProtection" = true;
-        "privacy.trackingprotection.emailtracking.enabled" = true;
-        "privacy.trackingprotection.enabled" = true;
-        "privacy.trackingprotection.fingerprinting.enabled" = true;
-        "privacy.trackingprotection.socialtracking.enabled" = true;
-        "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
-        "privacy.clearOnShutdown_v2.cache" = false;
-        "signon.rememberSignons" = true;
-        "signon.autofillForms" = true;
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-        "network.dns.disableIPv6" = true;
-        "ui.key.menuAccessKeyFocuses" = false;
-        "sidebar.verticalTabs" = true;
-        "font.size.variable.x-western" = 16;
-        "browser.startup.homepage" = "https://www.google.co.jp";
-        "browser.urlbar.trimURLs" = false;
-        "browser.uidensity" = 1;
-        "browser.preferences.defaultPerformanceSettings.enabled" = true;
-        "widget.gtk.overlay-scrollbars.enabled" = false;
+      profiles = {
+        default = {
+          id = 0;
+          name = "default";
+          isDefault = true;
+          settings = {
+            "webgl.disabled" = false;
+            "network.cookie.lifetimePolicy" = 0;
+            "privacy.resistFingerprinting" = false;
+            "privacy.clearOnShutdown.history" = false;
+            "privacy.clearOnShutdown.cookies" = false;
+            "privacy.donottrackheader.enabled" = true;
+            "privacy.fingerprintingProtection" = true;
+            "privacy.trackingprotection.emailtracking.enabled" = true;
+            "privacy.trackingprotection.enabled" = true;
+            "privacy.trackingprotection.fingerprinting.enabled" = true;
+            "privacy.trackingprotection.socialtracking.enabled" = true;
+            "privacy.clearOnShutdown_v2.cookiesAndStorage" = false;
+            "privacy.clearOnShutdown_v2.cache" = false;
+            "signon.rememberSignons" = true;
+            "signon.autofillForms" = true;
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = false;
+            "network.dns.disableIPv6" = true;
+            "ui.key.menuAccessKeyFocuses" = false;
+            "sidebar.verticalTabs" = true;
+            "font.size.variable.x-western" = 16;
+            "browser.startup.homepage" = "https://www.google.co.jp";
+            "browser.urlbar.trimURLs" = false;
+            "browser.uidensity" = 1;
+            "browser.preferences.defaultPerformanceSettings.enabled" = true;
+            "widget.gtk.overlay-scrollbars.enabled" = false;
+          };
+        };
       };
-
     };
 
     zsh = {
       enable = true;
-
       autosuggestion.enable = true;
       enableCompletion = true;
       syntaxHighlighting.enable = true;
-
       history = {
         path = "$HOME/.zsh_history";
         size = 10000000;
@@ -87,6 +92,7 @@
       };
 
       initContent = ''
+
         # ------------------------------------------------------------------------------
         # TMUX CONFIGURATION
         # ------------------------------------------------------------------------------
@@ -141,6 +147,7 @@
         zstyle ':completion:*' rehash true
 
         zmodload zsh/zprof
+
       '';
 
       shellAliases = {
@@ -151,7 +158,7 @@
         rm = "rm -rfv";
         cp = "cp -rv";
         mkdir = "mkdir -pv";
-        s =
+        ls =
           "clear; ${pkgs.eza}/bin/eza --long --header --icons=always --all --level=1 --group-directories-first --no-time";
         untar = "tar -xvvf";
         zz = "zip -r";
@@ -216,9 +223,11 @@
       enable = true;
 
       extraConfig = ''
+
         User masa
         IdentityFile ~/.ssh/id_ed25519
         IdentitiesOnly yes
+
       '';
 
     };
@@ -230,7 +239,7 @@
         debug.log_level = "Warn";
 
         window = {
-          opacity = 0.98;
+          opacity = 0.97;
           padding = {
             x = 1;
             y = 0;

@@ -10,7 +10,9 @@
     with pkgs;
 
     [
+
       kicad-small
+
     ]
 
   );

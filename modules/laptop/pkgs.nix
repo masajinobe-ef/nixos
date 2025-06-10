@@ -10,8 +10,10 @@
     with pkgs;
 
     [
+
       auto-cpufreq
       brightnessctl
+
     ]
 
   );

@@ -1,6 +1,7 @@
 { lib, inputs, pkgs, ... }: {
 
   services = {
+
     pulseaudio.enable = false;
 
     pipewire = {
@@ -13,6 +14,7 @@
       jack.enable = false;
 
       extraConfig.pipewire = {
+
         "10-custom" = {
           "context.properties" = {
             "default.clock.rate" = 48000;
@@ -20,6 +22,7 @@
             "default.clock.min-quantum" = 128;
             "default.clock.max-quantum" = 128;
           };
+
           "context.modules" = [{
             name = "libpipewire-module-rt";
             args = {
@@ -34,7 +37,9 @@
       };
 
       extraConfig.pipewire-pulse."92-low-latency" = {
+
         "context.properties" = { };
+
         "context.modules" = [{
           name = "libpipewire-module-protocol-pulse";
           args = {
@@ -45,6 +50,7 @@
             "pulse.max.quantum" = "128/48000";
           };
         }];
+
         "stream.properties" = {
           "node.latency" = "128/48000";
           "resample.quality" = 1;

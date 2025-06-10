@@ -21,7 +21,9 @@
     with pkgs;
 
     [
+
       ayugram-desktop
+
     ]
 
   );

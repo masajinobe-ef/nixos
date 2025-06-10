@@ -57,11 +57,15 @@
   };
 
   systemd.extraConfig = ''
+
     DefaultLimitNOFILE=65536
+
   '';
 
   systemd.user.extraConfig = ''
+
     DefaultLimitNOFILE=65536
+
   '';
 
 }

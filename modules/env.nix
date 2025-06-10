@@ -20,10 +20,6 @@
     TERMINAL = "alacritty";
     BROWSER = "firefox";
 
-    # CC/CXX Compiler
-    #CC = "clang";
-    #CXX = "clang++";
-
     # Terminal/color settings
     TERM = "xterm-256color";
     COLORTERM = "truecolor";
@@ -33,7 +29,6 @@
     UV_LINK_MODE = "copy";
     COMPOSE_BAKE = "true";
     ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
-    NIX_BUILD_CORES = 0;
 
   };
 

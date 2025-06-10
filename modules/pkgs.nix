@@ -9,7 +9,7 @@
     fastfetch
     home-manager
     libnotify
-    librewolf-bin
+    firefox
     httrack
     megacmd
     p7zip
