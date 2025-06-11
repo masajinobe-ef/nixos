@@ -5,7 +5,7 @@
 {
 
   networking = {
-    enableIPv6 = false;
+    enableIPv6 = true;
     nftables.enable = false;
 
     networkmanager = {

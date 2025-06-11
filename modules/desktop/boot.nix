@@ -21,7 +21,7 @@
       "amd_pstate=active"
       "cpufreq.default_governor=performance"
 
-      "ipv6.disable=1"
+      "ipv6.disable=0"
 
       "usbhid.mousepoll=1"
 
