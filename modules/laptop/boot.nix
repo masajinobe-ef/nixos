@@ -1,15 +1,10 @@
-{
-  pkgs,
-  lib,
-  ...
+{ pkgs
+, lib
+, ...
 }:
-
 {
-
   boot = {
-
     kernelParams = lib.mkForce [
-
       "loglevel=4"
       "mitigations=off"
 
@@ -26,24 +21,15 @@
 
       "usbcore.autosuspend=1"
       "usbhid.mousepoll=1"
-
     ];
-
     initrd.kernelModules = lib.mkForce [
-
       "vfat"
       "i915"
-
     ];
-
     extraModprobeConfig = lib.mkForce ''
-
       options hid_apple fnmode=2 iso_layout=1
       options usbcore autosuspend=1
       options i915 enable_fbc=1
-
     '';
-
   };
-
 }

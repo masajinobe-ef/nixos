@@ -1,39 +1,30 @@
-{
-  pkgs,
-  lib,
-  ...
+{ pkgs
+, lib
+, ...
 }:
-
 {
-
   networking = {
-
-    defaultGateway = lib.mkForce {
+    useDHCP = false;
+    useNetworkd = false;
+    defaultGateway = {
       address = "192.168.0.1";
-      interface = "wlp2s0";
+      interface = "enp42s0";
     };
-
-    interfaces = lib.mkForce {
-
+    interfaces = {
       wlp2s0 = {
-        useDHCP = false;
-
-        ipv4.addresses = [
-          {
-            address = "192.168.0.214";
+        ipv4 = {
+          addresses = [{
+            address = "192.168.0.200";
             prefixLength = 24;
-          }
-        ];
-
-        wakeOnLan = {
-          enable = true;
-          policy = [ "magic" ];
+          }];
+          routes = [{
+            address = "0.0.0.0";
+            prefixLength = 0;
+            via = "192.168.0.1";
+          }];
         };
-
       };
-
     };
-
   };
-
 }
+

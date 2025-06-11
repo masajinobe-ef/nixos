@@ -1,15 +1,10 @@
-{
-  ...
+{ ...
 }:
-
 {
-
   users.users.masa = {
     isNormalUser = true;
     description = "masa";
-
     extraGroups = [
-
       "networkmanager"
       "wheel"
       "seat"
@@ -20,9 +15,6 @@
       "docker"
 
     ];
-
     openssh.authorizedKeys.keys = [ "ssh-ed25519 ..." ];
-
   };
-
 }

@@ -1,35 +1,23 @@
-{
-  pkgs,
-  ...
+{ pkgs
+, ...
 }:
-
 {
-
   boot = {
-
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
       timeout = 2;
     };
-
     kernel.sysctl = {
-
       "user.max_user_namespaces" = 10000;
       "vm.swappiness" = 10;
       "vm.overcommit_memory" = 1;
-
     };
-
     kernelModules = [
-
       "tun"
       "tproxy"
-
     ];
-
     blacklistedKernelModules = [
-
       "sctp"
       "dccp"
       "rds"
@@ -49,16 +37,10 @@
       "rds"
       "tipc"
       #"r8169"
-
     ];
-
     supportedFilesystems = [
-
       "ntfs"
       "vfat"
-
     ];
-
   };
-
 }

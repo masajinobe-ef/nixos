@@ -1,14 +1,8 @@
-{
-  lib,
-  ...
+{ lib
+, ...
 }:
-
 {
-
   environment.sessionVariables = lib.mkAfter {
-
-      #
-
+    #
   };
-
 }

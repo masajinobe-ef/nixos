@@ -1,13 +1,16 @@
-{ ... }:
+{ ...
+}:
 
 {
-
   services = {
-
+    dbus.enable = true;
+    resolved.enable = false;
+    libinput.enable = true;
+    fstrim.enable = true;
+    gnome.gnome-keyring.enable = true;
     openssh = {
       enable = true;
       ports = [ 33677 ];
-
       settings = {
         ListenAddress = "0.0.0.0";
         AddressFamily = "inet";
@@ -33,20 +36,14 @@
         GatewayPorts = "no";
         Subsystem = "sftp internal-sftp";
       };
-
     };
-
     fail2ban = {
       enable = false;
       maxretry = 6;
       bantime = "1h";
     };
-
-    dbus.enable = true;
-
     xserver = {
       enable = true;
-
       displayManager = {
         gdm = {
           enable = true;
@@ -54,16 +51,6 @@
         };
         defaultSession = "sway";
       };
-
     };
-
-    resolved.enable = false;
-
-    libinput.enable = true;
-
-    fstrim.enable = true;
-
-    gnome.gnome-keyring.enable = true;
   };
-
 }

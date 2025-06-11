@@ -1,8 +1,8 @@
-{ pkgs, ... }:
-
+{ pkgs
+, ...
+}:
 {
   environment.systemPackages = with pkgs; [
-
     # Software
     acpid
     btop
@@ -83,6 +83,7 @@
     mesa
 
     # Dev
+    nixpkgs-fmt
     gnumake
     clang
     clang-tools
@@ -125,6 +126,5 @@
     tailwindcss-language-server
     typescript-language-server
     yaml-language-server
-
   ];
 }
