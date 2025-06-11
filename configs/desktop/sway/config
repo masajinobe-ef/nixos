@@ -103,7 +103,7 @@ bindsym $mod+r layout toggle split
 
 # # Assign applications to Workspaces
 assign [app_id="Alacritty"] $ws1
-assign [app_id="librewolf"] $ws2
+assign [app_id="firefox"] $ws2
 assign [app_id="com.ayugram.desktop"] $ws3
 
 # # Floating and specific Rules for Windows
@@ -113,7 +113,7 @@ for_window [app_id="MEGAsync"] floating enable
 ### ======================= Autostart ======================= ###
 exec {
     alacritty
-    librewolf
+    firefox
     ayugram-desktop
     sh -c "redshift"
 }
@@ -143,7 +143,7 @@ exec mako \
 bindsym $mod+Return exec alacritty
 
 # Browser
-bindsym $mod+w exec librewolf
+bindsym $mod+w exec firefox
 
 # Launcher
 bindsym $mod+e exec rofi -show combi -combi-modes drun
