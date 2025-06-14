@@ -92,7 +92,7 @@
     yamlfmt
     luajit
     nodejs
-    python3
+    python313
     docker
     docker-buildx
     go
