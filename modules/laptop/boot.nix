@@ -11,7 +11,7 @@
       "nmi_watchdog=0"
       "nowatchdog"
 
-      "ipv6.disable=0"
+      "ipv6.disable=1"
 
       "intel_pstate=disable"
       "intel_iommu=off"

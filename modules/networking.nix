@@ -3,7 +3,7 @@
 {
   networking = {
     networkmanager.enable = true;
-    enableIPv6 = true;
+    enableIPv6 = false;
     nftables.enable = false;
     useDHCP = false;
     resolvconf.enable = false;

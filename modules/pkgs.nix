@@ -9,14 +9,12 @@
     fastfetch
     home-manager
     libnotify
+    qutebrowser
     firefox
     httrack
     megacmd
     p7zip
     stow
-    unrar
-    unzip
-    zip
     alacritty
     neovim
     vim
@@ -37,14 +35,12 @@
     git
     qbittorrent
     wget
-    bluetuith
     eza
     fd
     fzf
     ripgrep
     tmux
     tmuxp
-    tree
     ueberzugpp
     yazi
     zoxide
@@ -83,6 +79,10 @@
     mesa
 
     # Dev
+    dnsutils
+    cachix
+    nix-tree
+    curl
     nixpkgs-fmt
     gnumake
     clang
@@ -92,7 +92,7 @@
     yamlfmt
     luajit
     nodejs
-    python313
+    python3
     docker
     docker-buildx
     go
