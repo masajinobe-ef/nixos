@@ -55,6 +55,7 @@
             "browser.uidensity" = 1;
             "browser.preferences.defaultPerformanceSettings.enabled" = true;
             "widget.gtk.overlay-scrollbars.enabled" = false;
+            "full-screen-api.warning.timeout" = 0;
           };
         };
       };
