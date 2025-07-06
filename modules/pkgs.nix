@@ -4,7 +4,7 @@
 {
   environment.systemPackages = with pkgs; [
     # Software
-    element-web
+    element-desktop
     baobab
     acpid
     btop
