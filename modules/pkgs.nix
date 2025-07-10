@@ -81,6 +81,7 @@
     mesa
 
     # Dev
+    openssl
     dnsutils
     cachix
     nix-tree
