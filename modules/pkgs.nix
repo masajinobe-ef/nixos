@@ -3,6 +3,12 @@
 }:
 {
   environment.systemPackages = with pkgs; [
+
+    bluez
+    bluez-tools
+    bluez-alsa
+    blueman
+
     # Software
     element-desktop
     baobab
