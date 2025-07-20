@@ -10,14 +10,12 @@
     blueman
 
     # Software
-    element-desktop
     baobab
     acpid
     btop
     fastfetch
     home-manager
     libnotify
-    qutebrowser
     firefox
     httrack
     megacmd
