@@ -13,12 +13,11 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      nixpkgs-unstable,
-      home-manager,
-      ...
+    { self
+    , nixpkgs
+    , nixpkgs-unstable
+    , home-manager
+    , ...
     }@inputs:
     let
 

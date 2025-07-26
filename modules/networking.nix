@@ -15,9 +15,7 @@
       allowPing = false;
       logRefusedConnections = true;
       allowedTCPPorts = [
-        80
-        443
-        33677
+        6668
       ];
       allowedUDPPorts = [
         9

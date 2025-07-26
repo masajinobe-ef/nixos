@@ -1,6 +1,5 @@
 { ...
 }:
-
 {
   services = {
     dbus.enable = true;
@@ -10,7 +9,7 @@
     gnome.gnome-keyring.enable = true;
     openssh = {
       enable = true;
-      ports = [ 33677 ];
+      ports = [ 6668 ];
       settings = {
         ListenAddress = "0.0.0.0";
         AddressFamily = "inet";
