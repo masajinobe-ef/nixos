@@ -85,6 +85,7 @@
     mesa
 
     # Dev
+    android-tools
     openssl
     dnsutils
     cachix
