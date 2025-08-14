@@ -4,11 +4,6 @@
 {
   environment.systemPackages = with pkgs; [
 
-    bluez
-    bluez-tools
-    bluez-alsa
-    blueman
-
     # Software
     baobab
     acpid
@@ -75,6 +70,12 @@
     pavucontrol
     pipewire
     wireplumber
+
+    # Drivers
+    bluez
+    bluez-tools
+    bluez-alsa
+    blueman
 
     # Graphic
     libva
