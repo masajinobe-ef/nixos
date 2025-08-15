@@ -10,6 +10,8 @@
     CLUTTER_BACKEND = "wayland";
     GDK_BACKEND = "wayland";
     NIXOS_OZONE_WL = "1";
+    # Audio
+    PIPEWIRE_LATENCY = "256/48000";
     # Core tools
     EDITOR = "nvim";
     TERMINAL = "alacritty";

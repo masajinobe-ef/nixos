@@ -67,6 +67,9 @@
     xdg-utils
 
     # Audio/Video
+    #obs-studio-plugins.obs-pipewire-audio-capture
+    qpwgraph
+    helvum
     pavucontrol
     pipewire
     wireplumber
