@@ -154,5 +154,5 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
 # Screenshot (requires grim / slurp / wl-clipboard)
-bindsym $mod+equal exec grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
-bindsym $mod+minus exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+equal exec mkdir -p ~/Pictures/Screenshots && grim ~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+minus exec mkdir -p ~/Pictures/Screenshots && grim -g "$(slurp)" - | wl-copy
