@@ -12,6 +12,7 @@
       "user.max_user_namespaces" = 10000;
       "vm.swappiness" = 10;
       "vm.overcommit_memory" = 1;
+      "net.ipv4.ip_unprivileged_port_start" = 80;
     };
     kernelModules = [
       "tun"
