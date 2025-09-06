@@ -22,6 +22,7 @@
     # Miscellaneous
     SUDO_PROMPT = "ENTER YOUR PASSWORD: ";
     UV_LINK_MODE = "copy";
+    DOCKER_CLI_PLUGINS_PATH = "/run/current-system/sw/libexec/docker/cli-plugins";
     COMPOSE_BAKE = "true";
     ENABLE_DEPRECATED_TUN_ADDRESS_X = "true";
   };
