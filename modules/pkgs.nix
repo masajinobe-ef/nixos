@@ -60,7 +60,6 @@
     hadolint
     helvum
     home-manager
-    httrack
     hyperfine
 
     # I
@@ -105,7 +104,6 @@
     # O
     obs-studio
     onlyoffice-bin
-    openssl
 
     # P
     p7zip
@@ -127,7 +125,6 @@
     redshift
     ripgrep
     rofi-wayland
-    ruby
     ruff
     rust-analyzer
     rustfmt
@@ -136,7 +133,6 @@
     shellcheck
     shfmt
     slurp
-    spek
     stow
     stylua
     swaybg
