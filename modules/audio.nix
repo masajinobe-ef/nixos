@@ -15,6 +15,17 @@
       };
       jack.enable = false;
 
+      wireplumber = {
+        enable = true;
+        configPackages = [
+          (pkgs.writeTextDir "share/wireplumber/wireplumber.conf.d/99-volume-limit.conf" ''
+            context.properties = {
+              default.volume.limit = 1.0
+            }
+          '')
+        ];
+      };
+
       extraConfig.pipewire = {
         "10-custom" = {
           "context.properties" = {
@@ -22,6 +33,7 @@
             "default.clock.quantum" = 256;
             "default.clock.min-quantum" = 256;
             "default.clock.max-quantum" = 256;
+            "default.volume.limit" = 1.0;
           };
           "context.modules" = [{
             name = "libpipewire-module-rt";
@@ -45,6 +57,7 @@
             "pulse.max.req" = "256/48000";
             "pulse.min.quantum" = "256/48000";
             "pulse.max.quantum" = "256/48000";
+            "pulse.max.volume" = "1.0";
           };
         }];
         "stream.properties" = {
