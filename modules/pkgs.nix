@@ -3,135 +3,181 @@
 }:
 {
   environment.systemPackages = with pkgs; [
-    baobab
+    # A
     acpid
-    btop
-    fastfetch
-    home-manager
-    libnotify
-    firefox
-    httrack
-    megacmd
-    p7zip
-    stow
     alacritty
-    neovim
-    vim
-    exiftool
-    imagemagick
-    inkscape
-    krita
-    xfce.ristretto
-    xfce.tumbler
+    android-tools
     audacious
+
+    # B
+    bash-language-server
+    baobab
+    blueman
+    bluez
+    bluez-alsa
+    bluez-tools
+    btop
+
+    # C
+    cachix
+    clang
+    clang-tools
+    codespell
+    curl
+
+    # D
+    docker
+    docker-buildx
+    dockerfile-language-server-nodejs
+    docker-language-server
+    dnsutils
+
+    # E
+    eslint_d
+    eza
+    exiftool
+
+    # F
+    fastfetch
+    fd
     ffmpeg
-    mpv
-    obs-studio
-    spek
-    vlc
-    yt-dlp
+    firefox
+    fzf
+
+    # G
     ghq
     git
-    qbittorrent
-    wget
-    eza
-    fd
-    fzf
-    ripgrep
-    tmux
-    tmuxp
-    ueberzugpp
-    yazi
-    zoxide
-    zsh
-    onlyoffice-bin
-    kdePackages.dolphin
     gnome-control-center
     gnome-keyring
     gnome-session
     gnome-shell
-    nautilus
-    file-roller
-    gtk3
-    libsForQt5.qtstyleplugins
-    qt6.qtwayland
-    qt5.qtwayland
-    libsForQt5.qtstyleplugins
-    qt6ct
-    libsForQt5.qt5ct
+    go
+    gnumake
     grim
-    mako
-    papirus-icon-theme
-    redshift
-    rofi-wayland
-    slurp
-    swaybg
-    swayidle
-    swaylock
-    waybar
-    wl-clipboard
-    xdg-utils
-    qpwgraph
+    gtk3
+
+    # H
+    hadolint
     helvum
-    pavucontrol
-    pipewire
-    wireplumber
-    bluez
-    bluez-tools
-    bluez-alsa
-    blueman
+    home-manager
+    httrack
+    hyperfine
+
+    # I
+    imagemagick
+    inkscape
+
+    # J
+    jq
+
+    # K
+    kdePackages.dolphin
+    krita
+
+    # L
+    libnotify
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugins
     libva
     libva-utils
     libvdpau
     libvdpau-va-gl
     libvpx
-    mesa
-    android-tools
-    openssl
-    dnsutils
-    cachix
-    nix-tree
-    curl
-    nixpkgs-fmt
-    gnumake
-    clang
-    clang-tools
-    hyperfine
-    eslint_d
-    yamlfmt
+    lua-language-server
     luajit
-    nodejs
-    python313
-    docker
-    docker-buildx
-    go
-    jq
-    luarocks
-    pnpm
-    ruby
-    rustfmt
-    tree-sitter
-    uv
-    yq
-    codespell
     luajitPackages.luacheck
+    luarocks
+
+    # M
+    mako
+    marksman
+    megacmd
+    mesa
+    mpv
+
+    # N
+    neovim
     nil
+    nix-tree
+    nixpkgs-fmt
+    nodejs
+
+    # O
+    obs-studio
+    onlyoffice-bin
+    openssl
+
+    # P
+    p7zip
+    papirus-icon-theme
+    pavucontrol
+    pipewire
+    pnpm
     prettierd
-    hadolint
-    shellcheck
-    shfmt
-    stylua
-    yamllint
-    taplo
+
+    # Q
+    qbittorrent
+    qpwgraph
+    qt5.qtwayland
+    qt6.qtwayland
+    qt6ct
+
+    # R
+    redshift
+    ripgrep
+    rofi-wayland
+    ruby
     ruff
     rust-analyzer
-    marksman
-    bash-language-server
-    dockerfile-language-server-nodejs
-    docker-language-server
-    lua-language-server
+    rustfmt
+
+    # S
+    shellcheck
+    shfmt
+    slurp
+    spek
+    stow
+    stylua
+    swaybg
+    swayidle
+    swaylock
+
+    # T
     tailwindcss-language-server
+    taplo
+    tmux
+    tmuxp
+    tree-sitter
     typescript-language-server
+
+    # U
+    ueberzugpp
+
+    # V
+    vim
+    vlc
+
+    # W
+    waybar
+    wget
+    wireplumber
+    wl-clipboard
+
+    # X
+    xdg-utils
+    xfce.ristretto
+    xfce.tumbler
+
+    # Y
     yaml-language-server
+    yamllint
+    yamlfmt
+    yazi
+    yq
+    yt-dlp
+
+    # Z
+    zoxide
+    zsh
   ];
 }

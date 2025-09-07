@@ -87,16 +87,6 @@
         text/x-c++=alacritty.desktop
         text/x-python=alacritty.desktop
         application/x-shellscript=alacritty.desktop
-
-        # Archive
-        application/zip=org.gnome.FileRoller.desktop
-        application/x-rar=org.gnome.FileRoller.desktop
-        application/x-7z-compressed=org.gnome.FileRoller.desktop
-        application/x-tar=org.gnome.FileRoller.desktop
-        application/gzip=org.gnome.FileRoller.desktop
-
-        # Nautilus
-        inode/directory=org.gnome.Nautilus.desktop
       '';
 
       "xdg/applications/com.ayugram.desktop.desktop".text = ''
