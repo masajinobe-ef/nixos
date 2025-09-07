@@ -3,8 +3,6 @@
 }:
 {
   environment.systemPackages = with pkgs; [
-
-    # Software
     baobab
     acpid
     btop
@@ -47,12 +45,20 @@
     zoxide
     zsh
     onlyoffice-bin
-
-    # Desktop
+    kdePackages.dolphin
     gnome-control-center
     gnome-keyring
     gnome-session
     gnome-shell
+    nautilus
+    file-roller
+    gtk3
+    libsForQt5.qtstyleplugins
+    qt6.qtwayland
+    qt5.qtwayland
+    libsForQt5.qtstyleplugins
+    qt6ct
+    libsForQt5.qt5ct
     grim
     mako
     papirus-icon-theme
@@ -65,30 +71,21 @@
     waybar
     wl-clipboard
     xdg-utils
-
-    # Audio/Video
-    #obs-studio-plugins.obs-pipewire-audio-capture
     qpwgraph
     helvum
     pavucontrol
     pipewire
     wireplumber
-
-    # Drivers
     bluez
     bluez-tools
     bluez-alsa
     blueman
-
-    # Graphic
     libva
     libva-utils
     libvdpau
     libvdpau-va-gl
     libvpx
     mesa
-
-    # Dev
     android-tools
     openssl
     dnsutils
@@ -126,8 +123,6 @@
     stylua
     yamllint
     taplo
-
-    # LSP
     ruff
     rust-analyzer
     marksman

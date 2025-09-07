@@ -4,8 +4,12 @@
 {
   xdg.portal = {
     enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      kdePackages.xdg-desktop-portal-kde
+    ];
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
   };
   programs.sway = {
     enable = true;
