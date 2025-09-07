@@ -114,6 +114,7 @@
     pipewire
     pnpm
     prettierd
+    python313
 
     # Q
     qbittorrent
