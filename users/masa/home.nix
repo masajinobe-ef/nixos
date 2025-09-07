@@ -7,20 +7,24 @@
   home.homeDirectory = "/home/masa";
   home.enableNixpkgsReleaseCheck = false;
   home.stateVersion = "25.05";
+
   home.packages = with pkgs; [
     oh-my-zsh
     zsh-autosuggestions
     zsh-syntax-highlighting
   ];
+
   home.sessionPath = [
     "$HOME/.personal/sh"
     "$HOME/.local/bin"
     "$HOME/.local/scripts"
     "$HOME/.local/share"
   ];
+
   home.sessionVariables = {
     #
   };
+
   programs = {
     firefox = {
       enable = true;
@@ -60,6 +64,7 @@
         };
       };
     };
+
     zsh = {
       enable = true;
       autosuggestion.enable = true;
@@ -150,6 +155,7 @@
         uz = "unzip";
       };
     };
+
     git = {
       enable = true;
       userName = "masajinobe-ef";
@@ -189,6 +195,7 @@
           "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`";
       };
     };
+
     ssh = {
       enable = true;
       extraConfig = ''
@@ -197,6 +204,7 @@
         IdentitiesOnly yes
       '';
     };
+
     alacritty = {
       enable = true;
       settings = {
