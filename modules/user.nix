@@ -13,7 +13,6 @@
       "input"
       "dialout"
       "docker"
-
     ];
     openssh.authorizedKeys.keys = [ "ssh-ed25519 ..." ];
   };

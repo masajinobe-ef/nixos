@@ -210,7 +210,7 @@
       settings = {
         debug.log_level = "Warn";
         window = {
-          opacity = 0.97;
+          opacity = 0.98;
           padding = {
             x = 1;
             y = 0;

@@ -80,13 +80,6 @@
         # Torrent
         application/x-bittorrent=qbittorrent.desktop
         x-scheme-handler/magnet=qbittorrent.desktop
-
-        # Text
-        text/plain=alacritty.desktop
-        text/x-c=alacritty.desktop
-        text/x-c++=alacritty.desktop
-        text/x-python=alacritty.desktop
-        application/x-shellscript=alacritty.desktop
       '';
 
       "xdg/applications/com.ayugram.desktop.desktop".text = ''
