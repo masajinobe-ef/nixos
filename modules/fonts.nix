@@ -10,6 +10,7 @@
       noto-fonts-emoji
       nerd-fonts.jetbrains-mono
       times-newer-roman
+      eb-garamond
     ];
     fontconfig = {
       enable = true;
