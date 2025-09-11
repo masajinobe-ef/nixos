@@ -18,70 +18,61 @@ success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
 info() { echo -e "${CYAN}[INFO]${NC} $1"; }
 warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
 
-# Проверка наличия git
 command -v git >/dev/null 2>&1 || error "Git is not installed"
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || error "Not a git repository"
 
 current_branch=$(git symbolic-ref --short HEAD 2>/dev/null) || error "Failed to get branch"
 info "Working in: ${PWD} (branch: ${current_branch})"
 
-# Показываем статус
 echo
 git status --short
 echo
 
-# Проверяем наличие изменений
 if [[ -z "$(git status --porcelain)" ]]; then
     warning "No changes to commit"
     exit 0
 fi
 
-# Показываем diff
 if [[ "$1" != "--no-diff" ]]; then
     git diff --stat
     echo
     read -rp "$(echo -e "${YELLOW}Show full diff? [y/N] ${NC}")" show_diff
-    if [[ "${show_diff,,}" =~ ^(y|yes)$ ]]; then
-        git diff
-    fi
+    [[ "${show_diff,,}" =~ ^(y|yes)$ ]] && git diff
 fi
 
-# Запрос сообщения коммита
 default_msg="Maintenance: $(date +'%Y-%m-%d %H:%M:%S')"
 echo
 read -rp "$(echo -e "${CYAN}Commit message [${default_msg}]: ${NC}")" commit_message
 commit_message="${commit_message:-$default_msg}"
 
-# Подтверждение коммита
 echo
-read -rp "$(echo -e "${YELLOW}Proceed with commit? [y/N] ${NC}")" confirm_commit
+read -rp "$(echo -e "${YELLOW}Proceed with commit? [Y/n] ${NC}")" confirm_commit
+confirm_commit=${confirm_commit:-y}
 
-if ! [[ "${confirm_commit,,}" =~ ^(y|yes)$ ]]; then
+[[ ! "${confirm_commit,,}" =~ ^(y|yes)$ ]] && {
     warning "Commit cancelled"
     exit 0
-fi
+}
 
-# Создание коммита
 info "Adding changes..."
 git add . || error "Failed to add changes"
 
 info "Committing: ${commit_message}"
-if ! git commit -am "${commit_message}"; then
-    error "Commit failed"
-fi
+git commit -am "${commit_message}" || error "Commit failed"
 success "Commit created"
 
-# Push с подтверждением
 read -rp "$(echo -e "${YELLOW}Push to ${current_branch}? [Y/n] ${NC}")" confirm_push
 confirm_push=${confirm_push:-y}
 
 if [[ "${confirm_push,,}" =~ ^(y|yes)$ ]]; then
     info "Pushing changes..."
-    if ! git push 2>/dev/null; then
+    if git push 2>/dev/null; then
+        success "Pushed to ${current_branch}"
+    else
         warning "No upstream branch - setting one"
         git push --set-upstream origin "${current_branch}" || error "Push failed"
+        success "Pushed to ${current_branch}"
     fi
-    success "Pushed to ${current_branch}"
 else
     warning "Changes not pushed"
 fi
