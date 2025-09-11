@@ -149,6 +149,7 @@
 
     # U
     ueberzugpp
+    uv
 
     # V
     vim

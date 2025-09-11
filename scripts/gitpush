@@ -18,24 +18,50 @@ success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
 info() { echo -e "${CYAN}[INFO]${NC} $1"; }
 warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
 
+# Проверка наличия git
 command -v git >/dev/null 2>&1 || error "Git is not installed"
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || error "Not a git repository"
 
 current_branch=$(git symbolic-ref --short HEAD 2>/dev/null) || error "Failed to get branch"
-info "Running in ${PWD} (branch: ${current_branch})"
+info "Working in: ${PWD} (branch: ${current_branch})"
 
+# Показываем статус
+echo
 git status --short
 echo
 
+# Проверяем наличие изменений
 if [[ -z "$(git status --porcelain)" ]]; then
     warning "No changes to commit"
     exit 0
 fi
 
+# Показываем diff
+if [[ "$1" != "--no-diff" ]]; then
+    git diff --stat
+    echo
+    read -rp "$(echo -e "${YELLOW}Show full diff? [y/N] ${NC}")" show_diff
+    if [[ "${show_diff,,}" =~ ^(y|yes)$ ]]; then
+        git diff
+    fi
+fi
+
+# Запрос сообщения коммита
 default_msg="Maintenance: $(date +'%Y-%m-%d %H:%M:%S')"
+echo
 read -rp "$(echo -e "${CYAN}Commit message [${default_msg}]: ${NC}")" commit_message
 commit_message="${commit_message:-$default_msg}"
 
+# Подтверждение коммита
+echo
+read -rp "$(echo -e "${YELLOW}Proceed with commit? [y/N] ${NC}")" confirm_commit
+
+if ! [[ "${confirm_commit,,}" =~ ^(y|yes)$ ]]; then
+    warning "Commit cancelled"
+    exit 0
+fi
+
+# Создание коммита
 info "Adding changes..."
 git add . || error "Failed to add changes"
 
@@ -45,6 +71,7 @@ if ! git commit -am "${commit_message}"; then
 fi
 success "Commit created"
 
+# Push с подтверждением
 read -rp "$(echo -e "${YELLOW}Push to ${current_branch}? [Y/n] ${NC}")" confirm_push
 confirm_push=${confirm_push:-y}
 
