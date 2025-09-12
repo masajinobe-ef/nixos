@@ -45,6 +45,7 @@
     fzf
 
     # G
+    go-task
     ghq
     git
     gnome-control-center
@@ -67,6 +68,7 @@
     inkscape
 
     # J
+    just
     jq
 
     # K
@@ -120,6 +122,8 @@
     qt5.qtwayland
     qt6.qtwayland
     qt6ct
+    qemu_kvm
+    qemu-utils
 
     # R
     redshift
