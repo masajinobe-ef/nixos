@@ -17,6 +17,7 @@
     bluez-alsa
     bluez-tools
     btop
+    bandit
 
     # C
     cachix
@@ -95,6 +96,7 @@
     megacmd
     mesa
     mpv
+    mypy
 
     # N
     neovim
@@ -108,6 +110,7 @@
     onlyoffice-bin
 
     # P
+    pyright
     p7zip
     papirus-icon-theme
     pavucontrol
